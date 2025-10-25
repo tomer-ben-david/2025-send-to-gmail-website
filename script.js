@@ -24,13 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const downloadBtn = document.getElementById('download-btn');
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // For now, show an alert. In production, this would link to the actual DMG file
-            alert('Download will be available soon! The DMG file will be uploaded to this repository.');
-            
-            // In production, you would replace the href with the actual download link:
-            // this.href = 'path/to/SendToGmail_0.1.0_arm64.dmg';
+            // Direct download from GitHub release
+            window.open('https://github.com/tomer-ben-david/2025-send-to-gmail/releases/download/v0.1.0/SendToGmail_0.1.0_arm64.dmg', '_blank');
         });
     }
 
