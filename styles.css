@@ -95,6 +95,19 @@ body {
     flex-wrap: wrap;
 }
 
+.download-meta {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+}
+
+.download-meta .download-size {
+    opacity: 0.8;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
