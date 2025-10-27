@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>SendToGmail</title>
+        <item>
+            <title>v2025.10.27.1</title>
+            <pubDate>Mon, 27 Oct 2025 06:03:12 +0200</pubDate>
+            <link>https://send-to-gmail.mindmeld360.com/appcast.xml</link>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>v2025.10.27.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/tomer-ben-david/2025-send-to-gmail/releases/download/SendToGmail-v2025.10.27.1.zip" length="1340533" type="application/octet-stream" sparkle:edSignature="KSdwCq8Ymy1UWzqLJ1hVJ71AjEE7sygSH/ScJ8oq4iA+0Qy9B48mXm0aTfoAyd7cZeCXJ/xWetZ8FC62ufvMDQ=="/>
+        </item>
+    </channel>
+</rss>
