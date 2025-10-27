@@ -3,13 +3,13 @@
     <channel>
         <title>SendToGmail</title>
         <item>
-            <title>v2025.10.27.5</title>
-            <pubDate>Mon, 27 Oct 2025 06:45:04 +0200</pubDate>
+            <title>v2025.10.27.7</title>
+            <pubDate>Mon, 27 Oct 2025 06:54:12 +0200</pubDate>
             <link>https://send-to-gmail.mindmeld360.com/appcast.xml</link>
             <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>v2025.10.27.5</sparkle:shortVersionString>
+            <sparkle:shortVersionString>v2025.10.27.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/SendToGmail-v2025.10.27.5.zip" length="1338694" type="application/octet-stream" sparkle:edSignature="gxZWY+anrjzRL2tyDDdyji1Tc77NFc5mQK+8p4J/K2EEVXj4mZO2GiEYack9jvdlkUj3GwSdtlM83BhwvVGtDQ=="/>
+            <enclosure url="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/SendToGmail-v2025.10.27.7.zip" length="1340574" type="application/octet-stream" sparkle:edSignature="t0blHalhXB0cLFr3xicTxnnz4sHLE+rpad5WKWGspWQemRl/5WnSKzRvUgErprVv/Hu2XPZoojE5NMTmM8j2BQ=="/>
         </item>
     </channel>
 </rss>
