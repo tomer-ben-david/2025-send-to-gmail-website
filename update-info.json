@@ -1,7 +1,7 @@
 {
-  "version": "v2025.10.28.8",
-  "downloadURL": "https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.10.28.8/SendToGmail_v2025.10.28.8_arm64.dmg",
-  "checksum": "sha256:4955de017552528f64be74f6b8d32010b2d9ec5c4f53c60c92134f36bebccbb1",
-  "releaseNotes": "## What's New in Version v2025.10.28.8\n\n- Bug fixes and improvements\n- Enhanced stability and performance",
+  "version": "v2025.10.28.9",
+  "downloadURL": "https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.10.28.9/SendToGmail_v2025.10.28.9_arm64.dmg",
+  "checksum": "sha256:b4060009f4fbf8d4ac791b3006f89c3c44f8fd9e57ca168b814a57f18efdc909",
+  "releaseNotes": "## What's New in Version v2025.10.28.9\n\n- Bug fixes and improvements\n- Enhanced stability and performance",
   "critical": false
 }
