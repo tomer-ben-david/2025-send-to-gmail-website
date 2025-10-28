@@ -1,7 +1,7 @@
 {
   "version": "v2025.10.29",
-  "downloadURL": "https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.10.29/SendToGmail_v2025.10.29_arm64.dmg",
+  "downloadURL": "https://raw.githubusercontent.com/tomer-ben-david/2025-send-to-gmail-website/main/test-update.dmg",
   "checksum": "sha256:placeholder",
-  "releaseNotes": "## What's New in Version 2025.10.29\n\n- Added auto-update functionality\n- Improved stability and performance\n- Bug fixes and enhancements\n\n## Installation Instructions\n\n1. Download the DMG file\n2. Open the DMG\n3. Drag SendToGmail to your Applications folder\n4. Replace the existing app when prompted",
+  "releaseNotes": "## What's New in Version 2025.10.29\n\n- Added auto-update functionality\n- Improved stability and performance\n- Bug fixes and enhancements",
   "critical": false
 }
