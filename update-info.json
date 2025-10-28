@@ -1,7 +1,7 @@
 {
-  "version": "v2025.10.29",
+  "version": "v2025.10.30",
   "downloadURL": "https://raw.githubusercontent.com/tomer-ben-david/2025-send-to-gmail-website/main/test-update.dmg",
   "checksum": "sha256:placeholder",
-  "releaseNotes": "## What's New in Version 2025.10.29\n\n- Added auto-update functionality\n- Improved stability and performance\n- Bug fixes and enhancements",
+  "releaseNotes": "## What's New in Version 2025.10.30\n\n- Fixed auto-update restart mechanism\n- Improved installation process\n- Enhanced user experience",
   "critical": false
 }
