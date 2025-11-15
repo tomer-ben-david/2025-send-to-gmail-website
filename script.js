@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe feature cards and steps
-    const animatedElements = document.querySelectorAll('.feature-card, .step, .faq-item');
+    const animatedElements = document.querySelectorAll('.quick-action-card, .feature-card, .step, .faq-item');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
@@ -71,21 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Add hover effect to demo box
-    const demoBox = document.querySelector('.demo-box');
-    if (demoBox) {
-        demoBox.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-            this.style.transition = 'transform 0.3s ease';
-        });
-        
-        demoBox.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    }
-
-    // Add typing effect to hero title (optional)
-    const heroTitle = document.querySelector('.hero h2');
+    // Add typing effect to main headline
+    const heroTitle = document.querySelector('.quick-action-header h2');
     if (heroTitle) {
         const text = heroTitle.textContent;
         heroTitle.textContent = '';
