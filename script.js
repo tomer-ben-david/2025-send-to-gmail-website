@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function(e) {
             // Direct download from GitHub release
-            window.open('https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.11.15/SendToGmail_v2025.11.15_arm64.dmg', '_blank');
+            window.open('https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.11.16/SendToGmail_v2025.11.16_arm64.dmg', '_blank');
         });
     }
 
