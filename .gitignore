@@ -1,3 +1,27 @@
+# Astro
+dist/
+.astro/
+node_modules/
+
+# Build output
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment
+.env
+.env.production
+
+# Custom
 updates/
 *.zip
 *.zip.signature
