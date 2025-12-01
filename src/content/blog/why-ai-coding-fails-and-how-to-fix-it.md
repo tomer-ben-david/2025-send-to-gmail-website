@@ -2,7 +2,7 @@
 title: "Why Your AI Coding Assistant Keeps Making Dumb Mistakes (And the Simple Fix)"
 description: "AI coding tools are great until they randomly break your app. Here's what's actually going wrong and a workflow to fix it."
 pubDate: 2025-11-30
-author: "Send to Gmail Team"
+author: "QuiKey Team"
 tags: ["AI", "Cursor", "Claude", "Coding", "Developer Productivity"]
 ---
 

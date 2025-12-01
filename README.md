@@ -1,14 +1,14 @@
-# Send to Gmail - Website
+# QuiKey - Website
 
-This is the official website for the Send to Gmail macOS application.
+This is the official website for QuiKey, a macOS Finder right-click enhancement tool.
 
 ## Live Website
 
-The website is hosted on GitHub Pages at: `https://tomer-ben-david.github.io/2025-send-to-gmail-website/`
+The website is hosted at: `https://quikey.app`
 
-## About Send to Gmail
+## About QuiKey
 
-Send to Gmail is a macOS service that adds "Send to Gmail" to Finder's right-click context menu. Select files in Finder, right-click, and send them as Gmail attachments.
+QuiKey is a macOS app that supercharges your Finder right-click menu. The primary feature, "Send to Gmail", lets you select files in Finder, right-click, and send them as Gmail attachments.
 
 ### Features
 
@@ -21,20 +21,25 @@ Send to Gmail is a macOS service that adds "Send to Gmail" to Finder's right-cli
 
 ## Website Structure
 
-- `index.html` - Main landing page
-- `styles.css` - Modern CSS styling
-- `script.js` - Interactive JavaScript
-- `.nojekyll` - Prevents GitHub Pages from processing with Jekyll
+Built with [Astro](https://astro.build/).
+
+- `src/pages/` - Page components
+- `src/layouts/` - Layout templates
+- `src/content/blog/` - Blog posts in Markdown
 
 ## Development
-
-This is a static website built with vanilla HTML, CSS, and JavaScript. No build process required.
 
 ### Local Development
 
 1. Clone this repository
-2. Open `index.html` in your browser
-3. Or use a local server: `python -m http.server 8000`
+2. Install dependencies: `npm install`
+3. Start dev server: `npm run dev`
+
+### Build
+
+```bash
+npm run build
+```
 
 ## Deployment
 

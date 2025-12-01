@@ -11,7 +11,7 @@ interface Props {
   tags?: string[];
 }
 
-const { title, description, pubDate, updatedDate, heroImage, author = 'Send to Gmail Team', tags = [] } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, author = 'QuiKey Team', tags = [] } = Astro.props;
 
 const formattedPubDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -26,7 +26,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 });
 ---
 
-<BaseLayout title={`${title} | Send to Gmail Blog`} description={description}>
+<BaseLayout title={`${title} | QuiKey Blog`} description={description}>
   <article class="blog-post">
     <div class="container">
       <header class="post-header">
