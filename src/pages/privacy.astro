@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy - QuiKey">
+    <section class="privacy-page">
+        <div class="container">
+            <div class="privacy-content">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last updated: December 1, 2025</p>
+
+                <h2>What QuiKey Does</h2>
+                <p>
+                    QuiKey is a macOS utility that adds actions to your Finder right-click menu.
+                    It lets you send files to Gmail, upload to Google Drive, analyze with AI, and convert to PDF.
+                </p>
+
+                <h2>Your Data</h2>
+                <p>
+                    QuiKey stores your settings and credentials <strong>locally on your Mac</strong>, encrypted.
+                    We don't have servers that store your data.
+                </p>
+                <p>
+                    When you use a feature, your files are sent directly to the relevant service
+                    (Google, OpenAI, etc.) — not through us.
+                </p>
+
+                <h2>Third-Party Services</h2>
+                <p>QuiKey connects to these services based on your actions:</p>
+                <ul>
+                    <li><strong>Google</strong> (Gmail, Drive, Gemini) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+                    <li><strong>OpenAI</strong> (ChatGPT) — <a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></li>
+                    <li><strong>Lemon Squeezy</strong> (payments) — <a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener">Lemon Squeezy Privacy Policy</a></li>
+                </ul>
+                <p>These services have their own privacy practices.</p>
+
+                <h2>Analytics</h2>
+                <p>
+                    We collect anonymous usage statistics (which features are used, success rates) to improve the app.
+                    <strong>You can disable this</strong> in Settings → Preferences → "Send anonymous usage metrics".
+                </p>
+                <p>We don't collect your files, emails, prompts, or personal information.</p>
+
+                <h2>Updates</h2>
+                <p>We may update this policy. Check back occasionally.</p>
+
+                <h2>Contact</h2>
+                <p>Questions? Email <a href="mailto:support@quikey.app">support@quikey.app</a></p>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .privacy-page {
+        padding: 120px 0 60px;
+        min-height: 80vh;
+    }
+
+    .privacy-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .privacy-content h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+        color: #6b7280;
+        font-size: 0.9rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .privacy-content h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .privacy-content p {
+        color: #4b5563;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    .privacy-content ul {
+        color: #4b5563;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .privacy-content li {
+        margin-bottom: 0.5rem;
+    }
+
+    .privacy-content a {
+        color: #3b82f6;
+        text-decoration: none;
+    }
+
+    .privacy-content a:hover {
+        text-decoration: underline;
+    }
+
+    .privacy-content strong {
+        color: #1f2937;
+    }
+
+    @media (max-width: 768px) {
+        .privacy-page {
+            padding: 100px 0 40px;
+        }
+
+        .privacy-content h1 {
+            font-size: 2rem;
+        }
+    }
+</style>
