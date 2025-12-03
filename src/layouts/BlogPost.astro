@@ -26,7 +26,13 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 });
 ---
 
-<BaseLayout title={`${title} | QuiKey Blog`} description={description}>
+<BaseLayout
+  title={`${title} | QuiKey Blog`}
+  description={description}
+  ogType="article"
+  publishedTime={pubDate.toISOString()}
+  author={author}
+>
   <article class="blog-post">
     <div class="container">
       <header class="post-header">

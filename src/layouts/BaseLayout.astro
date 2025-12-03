@@ -2,9 +2,22 @@
 interface Props {
   title: string;
   description?: string;
+  ogType?: string;
+  ogImage?: string;
+  publishedTime?: string;
+  author?: string;
 }
 
-const { title, description = "QuiKey - Supercharge your Finder right-click menu. Send files directly to Gmail with a simple right-click. macOS service for seamless file sharing." } = Astro.props;
+const {
+  title,
+  description = "QuiKey - macOS app that adds Gmail, Google Drive, PDF conversion, and AI analysis (ChatGPT & Gemini) to your right-click menu. Stop switching apps.",
+  ogType = "website",
+  ogImage = "/og-image.png",
+  publishedTime,
+  author
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -14,9 +27,47 @@ const { title, description = "QuiKey - Supercharge your Finder right-click menu.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:site_name" content="QuiKey" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Article specific (for blog posts) -->
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {author && <meta property="article:author" content={author} />}
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "QuiKey",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "macOS",
+      "description": "macOS productivity tool that adds Gmail, Google Drive, PDF conversion, and AI analysis to your right-click menu.",
+      "url": "https://quikey.app",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    })} />
 </head>
 <body>
     <header class="header">
