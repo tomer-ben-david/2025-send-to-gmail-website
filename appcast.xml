@@ -3,13 +3,13 @@
     <channel>
         <title>QuiKey</title>
         <item>
-            <title>v2025.12.01</title>
+            <title>v2025.12.03</title>
             <pubDate>Mon, 27 Oct 2025 12:24:09 +0200</pubDate>
             <link>https://quikey.app/appcast.xml</link>
             <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>v2025.12.01</sparkle:shortVersionString>
+            <sparkle:shortVersionString>v2025.12.03</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.01/QuiKey_v2025.12.01.zip" length="1283954" type="application/octet-stream" sparkle:edSignature="wXajKmZvubjW8GeAogPRFcTD89Kv/BUgD1y7KeM7vQlqRKhHegdLyMoI/XwOqfnyY6PvXAyq8g8aollhZbQjDg=="/>
+            <enclosure url="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.03/QuiKey_v2025.12.03.zip" length="1283954" type="application/octet-stream" sparkle:edSignature="wXajKmZvubjW8GeAogPRFcTD89Kv/BUgD1y7KeM7vQlqRKhHegdLyMoI/XwOqfnyY6PvXAyq8g8aollhZbQjDg=="/>
         </item>
     </channel>
 </rss>
