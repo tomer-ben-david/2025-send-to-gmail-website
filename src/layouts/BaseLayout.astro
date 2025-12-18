@@ -68,6 +68,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         "priceCurrency": "USD"
       }
     })} />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9K00PEKXB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K9K00PEKXB');
+    </script>
 </head>
 <body>
     <header class="header">
