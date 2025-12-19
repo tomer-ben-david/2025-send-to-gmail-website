@@ -45,6 +45,13 @@ npm run build
 
 The website is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
+## Community
+
+Stay up to date with QuiKey:
+
+- [Latest Announcement on X](https://x.com/sonixvo/status/2001941800479781042?s=20)
+- Read our articles on Medium
+
 ## License
 
 MIT
