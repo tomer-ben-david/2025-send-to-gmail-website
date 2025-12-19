@@ -1,5 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// ============================================
+// EARLY ACCESS MODE TOGGLE
+// Set to true to hide downloads and show early access signup
+// Set to false to show normal download buttons
+// ============================================
+const EARLY_ACCESS_MODE = true;
+
+// Form submission endpoint - using Web3Forms (free, no account needed)
+// To set up: Go to https://web3forms.com, enter info@quikey.app, verify email, get access key
+const WEB3FORMS_ACCESS_KEY = "b0b429e8-e074-4d99-814b-b944ca083ccb";
+const CONTACT_EMAIL = "info@quikey.app";
 ---
 
 <BaseLayout title="QuiKey - Supercharge Your Finder Right-Click Menu">
@@ -22,18 +34,60 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             <li>Choose an action: <strong>Send to Gmail</strong>, <strong>Upload to Drive</strong>, <strong>Analyze with AI</strong>, or <strong>Convert to PDF</strong></li>
                         </ol>
                         <p class="quick-action-note">Works anywhere Finder shows Quick Actions — Desktop, Downloads, AirDrop, and more. Plus text selection actions for translate, summarize, and more.</p>
-                        <div class="quick-action-actions">
-                            <a id="download-btn" href="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.01/QuiKey_v2025.12.01_arm64.dmg" class="btn btn-primary">Download for macOS</a>
-                            <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
-                        </div>
-                        <p class="quick-action-meta">
-                            <span class="download-version">Version v2025.12.01</span>
-                            <span class="download-size">· 1.3 MB</span>
-                        </p>
-                        <div class="quick-action-badges">
-                            <span class="badge">macOS 13.0+</span>
-                            <span class="badge">Free</span>
-                        </div>
+                        {EARLY_ACCESS_MODE ? (
+                            <div class="early-access-hero">
+                                <div class="early-access-badge">
+                                    <span class="pulse-dot"></span>
+                                    Limited Early Access
+                                </div>
+                                <p class="early-access-tagline">Be among the first to experience QuiKey</p>
+                                <form id="early-access-form-hero" class="early-access-form" action="https://api.web3forms.com/submit" method="POST">
+                                    <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+                                    <input type="hidden" name="subject" value="New QuiKey Early Access Request!" />
+                                    <input type="hidden" name="from_name" value="QuiKey Early Access" />
+                                    <div class="form-row">
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            placeholder="Enter your email"
+                                            required
+                                            class="email-input"
+                                        />
+                                        <button type="submit" class="btn btn-primary btn-glow">
+                                            Get Early Access
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="early-access-benefits">
+                                    <span class="benefit-item">✓ Free forever for early adopters</span>
+                                    <span class="benefit-item">✓ Priority support</span>
+                                    <span class="benefit-item">✓ Shape the product</span>
+                                </div>
+                                <div class="social-proof">
+                                    <div class="avatars">
+                                        <span class="avatar">👤</span>
+                                        <span class="avatar">👤</span>
+                                        <span class="avatar">👤</span>
+                                    </div>
+                                    <span class="waitlist-count" id="waitlist-count">Join <strong>127+</strong> others on the waitlist</span>
+                                </div>
+                            </div>
+                        ) : (
+                            <>
+                                <div class="quick-action-actions">
+                                    <a id="download-btn" href="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.01/QuiKey_v2025.12.01_arm64.dmg" class="btn btn-primary">Download for macOS</a>
+                                    <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
+                                </div>
+                                <p class="quick-action-meta">
+                                    <span class="download-version">Version v2025.12.01</span>
+                                    <span class="download-size">· 1.3 MB</span>
+                                </p>
+                                <div class="quick-action-badges">
+                                    <span class="badge">macOS 13.0+</span>
+                                    <span class="badge">Free</span>
+                                </div>
+                            </>
+                        )}
                     </div>
                     <div class="quick-action-media">
                         <img src="/assets/right-click-demo.gif" alt="Demo showing QuiKey Finder quick actions" loading="lazy">
@@ -122,45 +176,132 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <!-- Download Section -->
     <section id="download" class="download">
         <div class="container">
-            <h3>Download QuiKey</h3>
-            <div class="download-content">
-                <div class="download-info">
-                    <h4>Ready to streamline your workflow?</h4>
-                    <p>Download the latest version of QuiKey for macOS. Installation is simple and takes just a few minutes.</p>
-                    <div class="system-requirements">
-                        <h5>System Requirements</h5>
-                        <ul>
-                            <li>macOS 13.0 or later</li>
-                            <li>Google account for Gmail access</li>
-                            <li>Internet connection</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="download-box">
-                    <div class="download-card">
-                        <div class="app-icon">📧</div>
-                        <h4>QuiKey</h4>
-                        <p class="version">Version v2025.12.01</p>
-                        <div class="download-buttons">
-                            <a href="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.01/QuiKey_v2025.12.01_arm64.dmg" class="btn btn-download" id="download-btn-2">
-                                <span class="download-icon">⬇️</span>
-                                Download DMG
-                            </a>
+            {EARLY_ACCESS_MODE ? (
+                <>
+                    <h3>Get Early Access</h3>
+                    <div class="early-access-section">
+                        <div class="early-access-card">
+                            <div class="app-icon-large">🚀</div>
+                            <h4>Join the QuiKey Waitlist</h4>
+                            <p class="early-access-description">
+                                We're carefully onboarding early users to ensure the best experience.
+                                Sign up now to secure your spot and get exclusive benefits.
+                            </p>
+
+                            <form id="early-access-form-section" class="early-access-form-full" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+                                <input type="hidden" name="subject" value="New QuiKey Early Access Request!" />
+                                <input type="hidden" name="from_name" value="QuiKey Early Access" />
+                                <input type="hidden" name="redirect" value="https://quikey.app/?success=true" />
+
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email-section">Email</label>
+                                    <input type="email" id="email-section" name="email" placeholder="your@email.com" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="use-case">How will you use QuiKey? (optional)</label>
+                                    <select id="use-case" name="use_case">
+                                        <option value="">Select your primary use case</option>
+                                        <option value="gmail">Send files to Gmail</option>
+                                        <option value="drive">Upload to Google Drive</option>
+                                        <option value="ai">AI file analysis</option>
+                                        <option value="pdf">PDF conversion</option>
+                                        <option value="text">Text actions (translate, summarize)</option>
+                                        <option value="all">All of the above</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-large btn-glow">
+                                    🎉 Request Early Access
+                                </button>
+                            </form>
+
+                            <div class="early-access-perks">
+                                <h5>Early Adopter Benefits:</h5>
+                                <ul>
+                                    <li>🎁 <strong>Free forever</strong> - No subscription, ever</li>
+                                    <li>⭐ <strong>Priority support</strong> - Direct access to the team</li>
+                                    <li>🗳️ <strong>Feature voting</strong> - Shape what we build next</li>
+                                    <li>🏷️ <strong>Founding member badge</strong> - Exclusive recognition</li>
+                                </ul>
+                            </div>
+
+                            <div class="contact-alternative">
+                                <p>Have questions? Email us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+                            </div>
                         </div>
-                        <p class="download-size">~1.3 MB</p>
+
+                        <div class="early-access-info">
+                            <div class="system-requirements">
+                                <h5>System Requirements</h5>
+                                <ul>
+                                    <li>macOS 13.0 or later</li>
+                                    <li>Google account for Gmail access</li>
+                                    <li>Internet connection</li>
+                                </ul>
+                            </div>
+
+                            <div class="launch-info">
+                                <h5>What happens next?</h5>
+                                <ol>
+                                    <li>We'll review your request</li>
+                                    <li>You'll receive an invite email</li>
+                                    <li>Download and start using QuiKey</li>
+                                    <li>Share feedback to help us improve</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="installation-steps">
-                <h4>Installation Steps</h4>
-                <ol>
-                    <li>Download the DMG file above</li>
-                    <li>Double-click to mount the disk image</li>
-                    <li>Drag QuiKey.app to your Applications folder</li>
-                    <li>Launch the app to complete the setup</li>
-                    <li>Sign in with your Google account when prompted</li>
-                </ol>
-            </div>
+                </>
+            ) : (
+                <>
+                    <h3>Download QuiKey</h3>
+                    <div class="download-content">
+                        <div class="download-info">
+                            <h4>Ready to streamline your workflow?</h4>
+                            <p>Download the latest version of QuiKey for macOS. Installation is simple and takes just a few minutes.</p>
+                            <div class="system-requirements">
+                                <h5>System Requirements</h5>
+                                <ul>
+                                    <li>macOS 13.0 or later</li>
+                                    <li>Google account for Gmail access</li>
+                                    <li>Internet connection</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="download-box">
+                            <div class="download-card">
+                                <div class="app-icon">📧</div>
+                                <h4>QuiKey</h4>
+                                <p class="version">Version v2025.12.01</p>
+                                <div class="download-buttons">
+                                    <a href="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.01/QuiKey_v2025.12.01_arm64.dmg" class="btn btn-download" id="download-btn-2">
+                                        <span class="download-icon">⬇️</span>
+                                        Download DMG
+                                    </a>
+                                </div>
+                                <p class="download-size">~1.3 MB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="installation-steps">
+                        <h4>Installation Steps</h4>
+                        <ol>
+                            <li>Download the DMG file above</li>
+                            <li>Double-click to mount the disk image</li>
+                            <li>Drag QuiKey.app to your Applications folder</li>
+                            <li>Launch the app to complete the setup</li>
+                            <li>Sign in with your Google account when prompted</li>
+                        </ol>
+                    </div>
+                </>
+            )}
         </div>
     </section>
 
@@ -647,5 +788,351 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         padding-left: 2.5rem;
     }
 
+    .early-access-form .form-row {
+        flex-direction: column;
+    }
+
+    .early-access-form .email-input {
+        border-radius: 12px;
+    }
+
+    .early-access-form .btn {
+        border-radius: 12px;
+    }
+
+    .early-access-benefits {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .early-access-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   EARLY ACCESS MODE STYLES
+   ============================================ */
+
+/* Hero Early Access */
+.early-access-hero {
+    margin: 1.5rem 0 1rem;
+}
+
+.early-access-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+.early-access-tagline {
+    color: #475569;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Early Access Form - Hero */
+.early-access-form {
+    margin-bottom: 1rem;
+}
+
+.early-access-form .form-row {
+    display: flex;
+    gap: 0;
+    max-width: 500px;
+}
+
+.early-access-form .email-input {
+    flex: 1;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e5e7eb;
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.early-access-form .email-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.early-access-form .btn {
+    border-radius: 0 12px 12px 0;
+    white-space: nowrap;
+}
+
+.btn-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    }
+    to {
+        box-shadow: 0 4px 25px rgba(99, 102, 241, 0.5);
+    }
+}
+
+.early-access-benefits {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.benefit-item {
+    color: #059669;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    max-width: fit-content;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    margin-right: -8px;
+    border: 2px solid white;
+}
+
+.waitlist-count {
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+/* Early Access Section (Full Form) */
+.early-access-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.early-access-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.app-icon-large {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.early-access-card h4 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.early-access-description {
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Full Early Access Form */
+.early-access-form-full {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.btn-large {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Early Access Perks */
+.early-access-perks {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.early-access-perks h5 {
+    color: #166534;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.early-access-perks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.early-access-perks li {
+    color: #166534;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.contact-alternative {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.contact-alternative a {
+    color: #6366f1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-alternative a:hover {
+    text-decoration: underline;
+}
+
+/* Early Access Info Sidebar */
+.early-access-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.launch-info {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.launch-info h5 {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.launch-info ol {
+    color: #6b7280;
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.launch-info li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Success State (when returning from form submission) */
+.form-success {
+    text-align: center;
+    padding: 2rem;
+}
+
+.form-success h4 {
+    color: #059669;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-success p {
+    color: #6b7280;
+}
+
+/* Responsive for Early Access */
+@media (max-width: 768px) {
+    .early-access-section {
+        grid-template-columns: 1fr;
+    }
+
+    .early-access-form .form-row {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .early-access-form .email-input {
+        border-radius: 12px;
+        border-right: 2px solid #e5e7eb;
+    }
+
+    .early-access-form .btn {
+        border-radius: 12px;
+    }
 }
 </style>
