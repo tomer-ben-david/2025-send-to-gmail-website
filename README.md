@@ -49,8 +49,8 @@ The website is automatically deployed to GitHub Pages when changes are pushed to
 
 Stay up to date with QuiKey:
 
-- [Latest Announcement on X](https://x.com/sonixvo/status/2001941800479781042?s=20)
-- Read our articles on Medium
+- **Twitter/X**: Follow us on [@sonixvo](https://x.com/sonixvo) for updates and announcements
+- **Medium**: Read our articles and tutorials on [Medium](https://medium.com/quikey)
 
 ## License
 
