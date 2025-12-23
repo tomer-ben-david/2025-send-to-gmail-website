@@ -1,6 +1,7 @@
 ---
 title: "7 Ways to Actually Use QuiKey's AI File Analysis (With Prompts That Work)"
 description: "Practical workflows for analyzing contracts, PDFs, screenshots, and data files with QuiKey's ChatGPT and Gemini integration. Copy-paste prompts included."
+slug: "ai-file-analysis-workflows"
 pubDate: 2025-12-03
 author: "QuiKey Team"
 tags: ["QuiKey", "AI", "ChatGPT", "Gemini", "Productivity", "File Analysis"]

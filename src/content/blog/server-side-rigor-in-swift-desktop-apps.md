@@ -1,6 +1,7 @@
 ---
 title: "Bringing Server Side Engineering Rigor to Swift Desktop Apps"
 description: "How we apply backend principles like dependency injection and e2e testing to build a more stable macOS utility."
+slug: "server-side-rigor-in-swift-desktop-apps"
 pubDate: 2025-12-22
 author: "QuiKey Team"
 tags: ["Swift", "Engineering", "Architecture", "Dependency Injection", "Testing"]

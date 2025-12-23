@@ -1,6 +1,7 @@
 ---
 title: "Deduce, Don't Store"
 description: "Why we prefer computing state from the source of truth rather than caching values that can become stale."
+slug: "deduce-dont-store"
 pubDate: 2025-12-23
 author: "QuiKey Team"
 tags: ["Engineering", "Architecture", "State Management", "Swift"]

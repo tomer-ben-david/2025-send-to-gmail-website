@@ -1,6 +1,7 @@
 ---
 title: "Getting Started with QuiKey: Send Files and Text to Any Service in Seconds"
 description: "A complete guide to QuiKey - the macOS app that adds Gmail, Google Drive, ChatGPT, and Gemini to your right-click menu. Stop switching apps. Start getting things done."
+slug: "getting-started-with-quikey"
 pubDate: 2025-12-01
 author: "QuiKey Team"
 tags: ["QuiKey", "macOS", "Productivity", "Gmail", "Google Drive", "ChatGPT", "Gemini", "Tutorial"]

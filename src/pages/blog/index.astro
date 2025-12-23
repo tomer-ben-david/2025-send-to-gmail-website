@@ -34,7 +34,7 @@ const posts = (await getCollection('blog')).sort(
                 </time>
               </div>
               <h2>
-                <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                <a href={`/blog/${post.data.slug || post.id}`}>{post.data.title}</a>
               </h2>
               <p>{post.data.description}</p>
               {post.data.tags && post.data.tags.length > 0 && (
@@ -44,7 +44,7 @@ const posts = (await getCollection('blog')).sort(
                   ))}
                 </div>
               )}
-              <a href={`/blog/${post.id}`} class="read-more">Read more →</a>
+              <a href={`/blog/${post.data.slug || post.id}`} class="read-more">Read more →</a>
             </div>
           </article>
         ))}
