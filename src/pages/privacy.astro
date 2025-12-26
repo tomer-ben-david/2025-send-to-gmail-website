@@ -7,22 +7,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="container">
             <div class="privacy-content">
                 <h1>Privacy Policy</h1>
-                <p class="last-updated">Last updated: December 1, 2025</p>
+                <p class="last-updated">Last updated: December 26, 2025</p>
 
                 <h2>What QuiKey Does</h2>
                 <p>
-                    QuiKey is a macOS utility that adds actions to your Finder right-click menu.
-                    It lets you send files to Gmail, upload to Google Drive, analyze with AI, and convert to PDF.
+                    QuiKey is a macOS utility that adds actions to Finder (files/folders) and to selected text via the system Services menu.
+                    It can send files to Gmail, upload to Google Drive, analyze files or selected text with AI, convert to PDF, compress media, and schedule backups.
                 </p>
 
                 <h2>Your Data</h2>
                 <p>
-                    QuiKey stores your settings and credentials <strong>locally on your Mac</strong>, encrypted.
-                    We don't have servers that store your data.
+                    QuiKey stores your settings <strong>locally on your Mac</strong>.
+                    OAuth tokens and API keys are stored <strong>encrypted</strong>.
                 </p>
                 <p>
-                    When you use a feature, your files are sent directly to the relevant service
-                    (Google, OpenAI, etc.) — not through us.
+                    When you run an action, your files or selected text are sent directly to the relevant service
+                    (Google, AI providers, etc.) — not through a QuiKey file-processing server.
                 </p>
 
                 <h2>Third-Party Services</h2>
@@ -30,22 +30,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <ul>
                     <li><strong>Google</strong> (Gmail, Drive, Gemini) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
                     <li><strong>OpenAI</strong> (ChatGPT) — <a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></li>
+                    <li><strong>Anthropic</strong> (Claude) — <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a></li>
+                    <li><strong>OpenRouter</strong> (optional AI routing) — <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">OpenRouter Privacy Policy</a></li>
+                    <li><strong>CloudConvert</strong> (optional PDF conversion fallback) — <a href="https://cloudconvert.com/privacy" target="_blank" rel="noopener">CloudConvert Privacy Policy</a></li>
                     <li><strong>Lemon Squeezy</strong> (payments) — <a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener">Lemon Squeezy Privacy Policy</a></li>
                 </ul>
                 <p>These services have their own privacy practices.</p>
 
                 <h2>Analytics</h2>
                 <p>
-                    We collect anonymous usage statistics (which features are used, success rates) to improve the app.
-                    <strong>You can disable this</strong> in Settings → Preferences → "Send anonymous usage metrics".
+                    If enabled in Settings, QuiKey may send anonymous usage statistics (feature usage, success/failure rates) to help improve the app.
+                    <strong>You can disable this</strong> at any time in Settings.
                 </p>
-                <p>We don't collect your files, emails, prompts, or personal information.</p>
+                <p>We do not include your file contents in analytics events. If you use AI features, your prompt/file content is sent to the provider you selected.</p>
 
                 <h2>Updates</h2>
                 <p>We may update this policy. Check back occasionally.</p>
 
                 <h2>Contact</h2>
                 <p>Questions? Email <a href="mailto:support@quikey.app">support@quikey.app</a></p>
+                <p>See also: <a href="/terms">Terms of Service</a></p>
             </div>
         </div>
     </section>

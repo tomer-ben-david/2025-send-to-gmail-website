@@ -24,7 +24,7 @@ To ensure that the application always reflects the current reality, we prefer to
 This approach ensures that there is only one place where an update can happen. Every other component simply observes or deduces its logic from that single point.
 
 ```swift
-/// A generic example of deducing state from a dependency
+/// Deducing state from a dependency
 final class InventoryManager {
     private let storage: StorageProvider
     
