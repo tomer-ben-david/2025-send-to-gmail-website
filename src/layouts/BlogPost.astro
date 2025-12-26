@@ -44,6 +44,10 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
             </span>
           )}
           <span class="author">by {author}</span>
+          <button id="copy-permalink" class="copy-link" title="Copy Permalink">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            <span>Permalink</span>
+          </button>
         </div>
         <h1>{title}</h1>
         <p class="post-description">{description}</p>
@@ -104,6 +108,28 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 .updated {
   color: #9ca3af;
   font-style: italic;
+}
+
+.copy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.copy-link:hover {
+  color: #1d4ed8;
+}
+
+.copy-link.copied {
+  color: #10b981;
 }
 
 .post-header h1 {
@@ -302,3 +328,23 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
   }
 }
 </style>
+
+<script>
+  const copyButton = document.getElementById('copy-permalink');
+  if (copyButton) {
+    copyButton.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const span = copyButton.querySelector('span');
+        if (span) {
+          const originalText = span.textContent;
+          span.textContent = 'Copied!';
+          copyButton.classList.add('copied');
+          setTimeout(() => {
+            span.textContent = originalText;
+            copyButton.classList.remove('copied');
+          }, 2000);
+        }
+      });
+    });
+  }
+</script>

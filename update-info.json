@@ -1,7 +1,7 @@
 {
-  "version": "v2025.12.22",
-  "downloadURL": "https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.22/QuiKey_v2025.12.22_arm64.dmg",
-  "checksum": "sha256:b9c009e4d83057ce4416a29c525928dc270fac87133648056cc8c1c216aef130",
-  "releaseNotes": "## What's New in Version v2025.12.22\n\n- Bug fixes and improvements\n- Enhanced stability and performance",
+  "version": "v2025.12.26",
+  "downloadURL": "https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.26/QuiKey_v2025.12.26_arm64.dmg",
+  "checksum": "sha256:91c8de20f9beb9c8337f009a11a00198979f133595255bf6ceb33abcfaebbe6e",
+  "releaseNotes": "## What's New in Version v2025.12.26\n\n- Bug fixes and improvements\n- Enhanced stability and performance",
   "critical": false
 }
