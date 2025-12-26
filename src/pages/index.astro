@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
 
 // ============================================
 // EARLY ACCESS MODE TOGGLE
@@ -20,10 +21,10 @@ const CONTACT_EMAIL = "info@quikey.app";
         <div class="container">
             <div class="quick-action-card">
                 <div class="quick-action-header">
-                    <p class="quick-action-eyebrow">macOS Finder Enhancement</p>
+                    <p class="quick-action-eyebrow">macOS right-click actions</p>
                     <h2>Your macOS right-click menu, supercharged.</h2>
                     <p class="quick-action-description">
-                        <strong>Send files to Gmail</strong>, upload to <strong>Google Drive</strong>, analyze with <strong>ChatGPT or Gemini</strong>, convert to <strong>PDF</strong>, or use <strong>AI text actions</strong> like translate and summarize — all from your right-click menu.
+                        <strong>Send files to Gmail</strong>, upload to <strong>Google Drive</strong>, <strong>compress videos</strong>, convert to <strong>PDF</strong>, or run AI actions with <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Claude</strong> — from the menus you already use.
                     </p>
                 </div>
                 <div class="quick-action-body">
@@ -31,9 +32,9 @@ const CONTACT_EMAIL = "info@quikey.app";
                         <ol class="quick-action-steps">
                             <li>Select one or more files in Finder</li>
                             <li>Right-click and open the <strong>Quick Actions</strong> menu</li>
-                            <li>Choose an action: <strong>Send to Gmail</strong>, <strong>Upload to Drive</strong>, <strong>Analyze with AI</strong>, or <strong>Convert to PDF</strong></li>
+                            <li>Choose an action: <strong>Send to Gmail</strong>, <strong>Upload to Drive</strong>, <strong>Analyze with AI</strong>, <strong>Convert to PDF</strong>, <strong>Compress Video</strong>, or <strong>Scheduled Backup</strong></li>
                         </ol>
-                        <p class="quick-action-note">Works anywhere Finder shows Quick Actions — Desktop, Downloads, AirDrop, and more. Plus text selection actions for translate, summarize, and more.</p>
+                        <p class="quick-action-note">Works anywhere Finder shows Quick Actions — Desktop, Downloads, AirDrop, and more. Select text in any app to run AI actions (analyze, translate, look up definitions, summarize, explain, grammar check) via the system Services menu.</p>
                         {EARLY_ACCESS_MODE ? (
                             <div class="early-access-hero">
                                 <div class="early-access-badge">
@@ -59,9 +60,9 @@ const CONTACT_EMAIL = "info@quikey.app";
                                     </div>
                                 </form>
                                 <div class="early-access-benefits">
-                                    <span class="benefit-item">✓ Free forever for early adopters</span>
-                                    <span class="benefit-item">✓ Priority support</span>
-                                    <span class="benefit-item">✓ Shape the product</span>
+                                    <span class="benefit-item">✓ Priority access</span>
+                                    <span class="benefit-item">✓ Launch perks</span>
+                                    <span class="benefit-item">✓ Shape the roadmap</span>
                                 </div>
                                 <div class="social-proof">
                                     <div class="avatars">
@@ -97,42 +98,192 @@ const CONTACT_EMAIL = "info@quikey.app";
         </div>
     </section>
 
+    <!-- Where It Works -->
+    <section id="where" class="where">
+        <div class="container">
+            <h3>Built into the tools you already use</h3>
+            <p class="where-subtitle">
+                QuiKey installs <strong>9 Finder actions</strong> and <strong>18 selected-text actions</strong> as native macOS Services. AI chats and squads are available inside the app.
+            </p>
+
+            <div class="where-grid">
+                <div class="where-card">
+                    <div class="where-card-header">
+                        <div class="where-icon-badge">
+                            <Icon name="folder" class="icon" title="Finder actions" />
+                        </div>
+                        <div>
+                            <h4>Finder (files & folders)</h4>
+                            <p>Right-click in Finder → Quick Actions / Services</p>
+                        </div>
+                    </div>
+                    <ul class="where-list">
+                        <li><span class="where-item-title">Send to Gmail</span><span class="where-item-desc">Attachments via Gmail.</span></li>
+                        <li><span class="where-item-title">Upload to Drive</span><span class="where-item-desc">Upload selected items to Google Drive.</span></li>
+                        <li><span class="where-item-title">Analyze with AI</span><span class="where-item-desc">Send files to ChatGPT, Gemini, or Claude.</span></li>
+                        <li><span class="where-item-title">Convert to PDF</span><span class="where-item-desc">Convert selected items to PDF.</span></li>
+                        <li><span class="where-item-title">Compress video</span><span class="where-item-desc">Reduce size of videos and GIFs.</span></li>
+                        <li><span class="where-item-title">Scheduled backups</span><span class="where-item-desc">Add/remove items from your backup list.</span></li>
+                    </ul>
+                </div>
+
+                <div class="where-card">
+                    <div class="where-card-header">
+                        <div class="where-icon-badge">
+                            <Icon name="text" class="icon" title="Text actions" />
+                        </div>
+                        <div>
+                            <h4>Any app (selected text)</h4>
+                            <p>Select text → right-click → Services</p>
+                        </div>
+                    </div>
+                    <ul class="where-list">
+                        <li><span class="where-item-title">Analyze</span><span class="where-item-desc">Extract meaning and key points.</span></li>
+                        <li><span class="where-item-title">Summarize</span><span class="where-item-desc">Short summary of selected text.</span></li>
+                        <li><span class="where-item-title">Explain</span><span class="where-item-desc">Clarify and break down content.</span></li>
+                        <li><span class="where-item-title">Translate</span><span class="where-item-desc">To your configured target language.</span></li>
+                        <li><span class="where-item-title">Define</span><span class="where-item-desc">Definitions and context.</span></li>
+                        <li><span class="where-item-title">Grammar check</span><span class="where-item-desc">Fix grammar and style.</span></li>
+                    </ul>
+                    <p class="where-footnote">Providers: ChatGPT, Gemini, Claude.</p>
+                </div>
+
+                <div class="where-card">
+                    <div class="where-card-header">
+                        <div class="where-icon-badge">
+                            <Icon name="app" class="icon" title="Inside the app" />
+                        </div>
+                        <div>
+                            <h4>Inside the app</h4>
+                            <p>Chats, squads, history, stats, settings</p>
+                        </div>
+                    </div>
+                    <ul class="where-list">
+                        <li><span class="where-item-title">AI Chats</span><span class="where-item-desc">Conversations with follow-ups, local history, and exports.</span></li>
+                        <li><span class="where-item-title">AI Squads</span><span class="where-item-desc">Multi-step workflows across multiple providers.</span></li>
+                        <li><span class="where-item-title">Templates</span><span class="where-item-desc">Built-in prompts; Pro unlocks custom templates and branding removal.</span></li>
+                        <li><span class="where-item-title">History & statistics</span><span class="where-item-desc">Reopen results, view usage, export reports/CSV.</span></li>
+                        <li><span class="where-item-title">Backups</span><span class="where-item-desc">Set schedule/time and Gmail labels for scheduled backups.</span></li>
+                        <li><span class="where-item-title">Trial/Pro</span><span class="where-item-desc">Usage limits and upgrades.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h3>Why QuiKey?</h3>
+            <h3>What you can do</h3>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">📧</div>
+                    <div class="feature-icon"><Icon name="mail" class="icon" title="Send to Gmail" /></div>
                     <h4>Send to Gmail</h4>
-                    <p>Email files as attachments directly from Finder. Smart subject lines generated automatically.</p>
+                    <p>Email selected files as Gmail attachments from Finder. Supports drafts, recipients, subject/body templates, and labels.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">☁️</div>
+                    <div class="feature-icon"><Icon name="cloud" class="icon" title="Upload to Drive" /></div>
                     <h4>Upload to Drive</h4>
-                    <p>Send files to Google Drive with one click. Choose destination folders on the fly.</p>
+                    <p>Upload files to Google Drive from Finder, organized into a dedicated <strong>QuiKey</strong> folder.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h4>AI Analysis</h4>
-                    <p>Analyze files with ChatGPT or Gemini. Get summaries, insights, and answers instantly.</p>
+                    <div class="feature-icon"><Icon name="sparkles" class="icon" title="Analyze with AI" /></div>
+                    <h4>Analyze files with AI</h4>
+                    <p>Right-click files in Finder to analyze with <strong>ChatGPT</strong>, <strong>Gemini</strong>, or <strong>Claude</strong> (API key or browser mode where supported).</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📄</div>
+                    <div class="feature-icon"><Icon name="document" class="icon" title="Convert to PDF" /></div>
                     <h4>Convert to PDF</h4>
-                    <p>Convert documents, images, and presentations to PDF format in seconds.</p>
+                    <p>Convert files to PDF quickly, with options like password protection and an optional cloud fallback.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">✍️</div>
-                    <h4>Text Actions</h4>
-                    <p>Select text anywhere and translate, summarize, define, or fix grammar with AI.</p>
+                    <div class="feature-icon"><Icon name="compress" class="icon" title="Compress media" /></div>
+                    <h4>Compress video & GIFs</h4>
+                    <p>Reduce the size of large videos and animated GIFs for easier sharing.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h4>Secure & Private</h4>
-                    <p>OAuth 2.0 authentication. Your credentials stay safe. No data stored on our servers.</p>
+                    <div class="feature-icon"><Icon name="archive" class="icon" title="Scheduled backups" /></div>
+                    <h4>Scheduled backups</h4>
+                    <p>Add files/folders to a scheduled Gmail backup list from Finder, then manage timing/labels in the app.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><Icon name="text" class="icon" title="Text actions" /></div>
+                    <h4>AI actions for selected text</h4>
+                    <p>Select text in any app and run AI actions: analyze, translate, look up definitions, summarize, explain, and grammar check.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><Icon name="bubble" class="icon" title="AI Chats" /></div>
+                    <h4>AI Chats</h4>
+                    <p>Use the app for ongoing conversations with files, follow-ups, and local history. Export conversations when needed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><Icon name="users" class="icon" title="AI Squads" /></div>
+                    <h4>AI Squads</h4>
+                    <p>Run multi-step workflows where multiple AI providers collaborate, compare, and synthesize results into one output (with token/cost estimates).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><Icon name="template" class="icon" title="Templates" /></div>
+                    <h4>Templates</h4>
+                    <p>Use built-in prompt templates across providers. Pro unlocks custom templates and branding removal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><Icon name="chart" class="icon" title="History & statistics" /></div>
+                    <h4>History & statistics</h4>
+                    <p>Track what you ran, reopen results, and view usage statistics inside the app.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><Icon name="lock" class="icon" title="Secure" /></div>
+                    <h4>Secure by design</h4>
+                    <p>Credentials and API keys are stored <strong>encrypted</strong> on your Mac. You can opt out of usage analytics.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h3>Pricing</h3>
+            <p class="pricing-subtitle">
+                Start with a <strong>free trial</strong>. Upgrade to Pro for unlimited usage and customization.
+            </p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-plan">Free</div>
+                    <div class="pricing-price">Trial included</div>
+                    <ul class="pricing-list">
+                        <li>Monthly operation limit</li>
+                        <li>Up to <strong>5 files</strong> per action</li>
+                        <li>No custom templates</li>
+                        <li>Branding included</li>
+                    </ul>
+                    <a href="/#download" class="btn btn-secondary">Get started</a>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-plan">Pro</div>
+                    <div class="pricing-price">$1.99<span class="pricing-unit">/month</span></div>
+                    <div class="pricing-note">Also available: $19 (2-year) or $29 (lifetime)</div>
+                    <ul class="pricing-list">
+                        <li><strong>Unlimited</strong> operations</li>
+                        <li><strong>Unlimited</strong> files per action</li>
+                        <li>Custom templates</li>
+                        <li>Remove branding</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="/#download" class="btn btn-primary">Upgrade to Pro</a>
+                </div>
+            </div>
+
+            {EARLY_ACCESS_MODE && (
+                <div class="pricing-early-access">
+                    <span class="badge">Early Access</span>
+                    <p>
+                        Pro checkout is rolling out during early access. Join the waitlist and we’ll invite you when billing is enabled.
+                    </p>
+                </div>
+            )}
         </div>
     </section>
 
@@ -144,29 +295,22 @@ const CONTACT_EMAIL = "info@quikey.app";
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>Select Files or Text</h4>
-                        <p>Choose files in Finder or select text anywhere</p>
+                        <h4>Right-Click</h4>
+                        <p>On files in Finder or on selected text</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>Right-Click</h4>
-                        <p>Open the Quick Actions or Services menu</p>
+                        <h4>Choose Action</h4>
+                        <p>Gmail, Drive, AI analysis, PDF conversion, compression, backups, or text actions</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h4>Pick an Action</h4>
-                        <p>Gmail, Drive, AI analysis, PDF convert, translate, and more</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
                         <h4>Done</h4>
-                        <p>QuiKey handles the rest. Get notified when complete.</p>
+                        <p>Get a notification when it's complete</p>
                     </div>
                 </div>
             </div>
@@ -210,9 +354,12 @@ const CONTACT_EMAIL = "info@quikey.app";
                                         <option value="">Select your primary use case</option>
                                         <option value="gmail">Send files to Gmail</option>
                                         <option value="drive">Upload to Google Drive</option>
-                                        <option value="ai">AI file analysis</option>
+                                        <option value="ai-squad">AI Squad Consultation</option>
+                                        <option value="chat">Chat with AI</option>
+                                        <option value="text">Text AI tools (translate, summarize, etc.)</option>
                                         <option value="pdf">PDF conversion</option>
-                                        <option value="text">Text actions (translate, summarize)</option>
+                                        <option value="video">Video compression</option>
+                                        <option value="backup">Daily backups</option>
                                         <option value="all">All of the above</option>
                                     </select>
                                 </div>
@@ -223,12 +370,11 @@ const CONTACT_EMAIL = "info@quikey.app";
                             </form>
 
                             <div class="early-access-perks">
-                                <h5>Early Adopter Benefits:</h5>
+                                <h5>Early Access includes:</h5>
                                 <ul>
-                                    <li>🎁 <strong>Free forever</strong> - No subscription, ever</li>
-                                    <li>⭐ <strong>Priority support</strong> - Direct access to the team</li>
-                                    <li>🗳️ <strong>Feature voting</strong> - Shape what we build next</li>
-                                    <li>🏷️ <strong>Founding member badge</strong> - Exclusive recognition</li>
+                                    <li><strong>Priority onboarding</strong> - we’ll invite you as we expand access</li>
+                                    <li><strong>Direct feedback loop</strong> - help shape what ships next</li>
+                                    <li><strong>Early builds</strong> - get updates as new actions land</li>
                                 </ul>
                             </div>
 
@@ -312,19 +458,27 @@ const CONTACT_EMAIL = "info@quikey.app";
             <div class="faq-list">
                 <div class="faq-item">
                     <h4>Is my data secure?</h4>
-                    <p>Yes! QuiKey uses Google's official OAuth 2.0 authentication. Your credentials are never stored locally, and all communication is encrypted.</p>
+                    <p>Yes. Google access uses OAuth 2.0, and API keys/tokens are stored encrypted on your Mac. Files go directly to the providers you choose (Google, AI providers, etc.).</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Can I use it with multiple Google accounts?</h4>
-                    <p>Currently, the app supports one Google account at a time. You can switch accounts by signing out and back in.</p>
+                    <h4>Where do the actions appear?</h4>
+                    <p>File actions appear in Finder’s right-click menu (Quick Actions/Services). Text actions appear when you select text in any app and use the system Services menu.</p>
                 </div>
                 <div class="faq-item">
                     <h4>What file types are supported?</h4>
-                    <p>All file types are supported! The app works with any file that Gmail can handle as an attachment.</p>
+                    <p>For Gmail/Drive, you can send any file type. PDF conversion and AI analysis depend on the action and provider, and QuiKey will guide you if a file is unsupported.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Is there a cost?</h4>
-                    <p>QuiKey is completely free to use. No subscriptions, no hidden fees.</p>
+                    <p>QuiKey includes a free trial and an optional Pro upgrade (unlimited operations, unlimited files per action, custom templates, and more).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is everything triggered from right-click?</h4>
+                    <p>The file and text actions are. Features like <strong>AI Squads</strong>, <strong>AI Chats</strong>, history, and statistics live inside the app.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I disable analytics?</h4>
+                    <p>Yes. You can disable usage metrics in Settings at any time.</p>
                 </div>
             </div>
         </div>
@@ -334,7 +488,9 @@ const CONTACT_EMAIL = "info@quikey.app";
 <style>
 /* CTA Section */
 .quick-action {
-    background: #ffffff;
+    background: radial-gradient(1200px circle at 20% 0%, rgba(99, 102, 241, 0.12), transparent 50%),
+      radial-gradient(900px circle at 80% 10%, rgba(59, 130, 246, 0.12), transparent 45%),
+      #f8fafc;
     padding: 8rem 0 4rem;
 }
 
@@ -343,6 +499,7 @@ const CONTACT_EMAIL = "info@quikey.app";
     border-radius: 24px;
     padding: 3rem;
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    border: 1px solid rgba(226, 232, 240, 0.9);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -467,6 +624,129 @@ const CONTACT_EMAIL = "info@quikey.app";
     border: 6px solid #ffffff;
 }
 
+/* Where It Works Section */
+.where {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.where h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.where-subtitle {
+    text-align: center;
+    color: #6b7280;
+    max-width: 840px;
+    margin: 0 auto 3rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.where-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.where-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1.75rem;
+}
+
+.where-card-header {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.where-icon-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: rgba(99, 102, 241, 0.12);
+    color: #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    border: 1px solid rgba(99, 102, 241, 0.18);
+}
+
+:global(.icon) {
+    width: 22px;
+    height: 22px;
+}
+
+:global(.icon-sm) {
+    width: 18px;
+    height: 18px;
+}
+
+.where-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.where-card p {
+    color: #6b7280;
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.where-footnote {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.where-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    color: #374151;
+}
+
+.where-list li {
+    padding: 0.5rem 0 0.5rem 1.25rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.where-item-title {
+    font-weight: 700;
+    color: #111827;
+}
+
+.where-item-desc {
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.where-item-desc::before {
+    content: " — ";
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.where-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: 700;
+}
+
 /* Features Section */
 .features {
     padding: 6rem 0;
@@ -502,8 +782,16 @@ const CONTACT_EMAIL = "info@quikey.app";
 }
 
 .feature-icon {
-    font-size: 2.5rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
+    border: 1px solid rgba(59, 130, 246, 0.18);
 }
 
 .feature-card h4 {
@@ -516,6 +804,113 @@ const CONTACT_EMAIL = "info@quikey.app";
 .feature-card p {
     color: #6b7280;
     line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 6rem 0;
+    background: #ffffff;
+}
+
+.pricing h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.pricing-subtitle {
+    text-align: center;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pricing-card-featured {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.18);
+}
+
+.pricing-plan {
+    font-weight: 700;
+    color: #111827;
+    font-size: 1.1rem;
+}
+
+.pricing-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.pricing-unit {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.pricing-note {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: -0.75rem;
+}
+
+.pricing-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0 1rem;
+    color: #374151;
+}
+
+.pricing-list li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+}
+
+.pricing-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: 800;
+}
+
+.pricing-early-access {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.pricing-early-access p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.7;
 }
 
 /* How it Works Section */
