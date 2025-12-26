@@ -1,20 +1,14 @@
 ---
 const DOWNLOAD_URL = "https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.26/QuiKey_v2025.12.26_arm64.dmg";
-const VERSION = "v2025.12.26";
-
-Astro.response = new Response(null, {
-  status: 302,
-  headers: { Location: DOWNLOAD_URL }
-});
+const metaTag = `<meta http-equiv="refresh" content="0;url=${DOWNLOAD_URL}">`;
+const scriptTag = `<script>window.location.href = "${DOWNLOAD_URL}";<\/script>`;
 ---
 
 <!doctype html>
 <html>
-  <head>
-    <meta http-equiv="refresh" content="0;url={DOWNLOAD_URL}">
-    <script>window.location.href = "{DOWNLOAD_URL}";</script>
-  </head>
+  <head set:html={metaTag} />
   <body>
     <p>Redirecting to download...</p>
+    <div set:html={scriptTag} />
   </body>
 </html>
