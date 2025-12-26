@@ -19,7 +19,7 @@ We’ve been conditioned to think this is just "how it works." We treat the LLM 
 
 I don’t want to go to an AI "app." I want to get the answer while my cursor is still on the file.
 
-That’s why we built QuiKey. It stays hidden in the background, a silent layer over macOS that only wakes up when you right-click. It brings the world's best models—ChatGPT, Claude, Gemini—directly into your Finder. No tabs. No context switching. No "AI-speak" fluff. Just the answer.
+That’s why we built QuiKey. It stays hidden in the background, a silent layer over macOS that only wakes up when you right-click. It brings the world's best models—ChatGPT, Claude, Gemini—directly into your Finder. No tabs. No context switching. Just the answer.
 
 ### The Power Move: AI Squads
 
@@ -28,7 +28,7 @@ The real magic isn't just "chatting with a file." It's orchestration. Inside Qui
 Here are three ways I use this to stay in the zone:
 
 **1. The Parallel Grill**
-I don’t trust one model for high-stakes work. When a client sends a complex proposal, I right-click it and trigger an "Analysis Squad." Claude and GPT-4o analyze the doc simultaneously. If they disagree on a clause, QuiKey highlights it. It’s like having two senior analysts for the price of an API call.
+I don’t trust one model for high-stakes work. When a client sends a complex proposal, I right-click it and trigger an "Analysis Squad." Claude and GPT-5.2 analyze the doc simultaneously. If they disagree on a clause, QuiKey highlights it. It’s like having two senior analysts for the price of an API call.
 
 **2. The Spec Workshop (with Checkpoints)**
 Most AI tools are "fire and forget." You hit enter and pray. QuiKey uses **Checkpoint Gating**. I’ll start a multi-step research workflow on a technical doc. The AI drafts an outline and then *pauses*. It waits at a Checkpoint for me to say "looks good" or "add more detail" before it finishes the job. No wasted time on results I didn't want.
