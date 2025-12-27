@@ -170,6 +170,88 @@ const CONTACT_EMAIL = "info@quikey.app";
         </div>
     </section>
 
+    <!-- Video Guides Section -->
+    <section id="guides" class="guides">
+        <div class="container">
+            <div class="guides-header">
+                <h3>See it in action</h3>
+                <p class="guides-subtitle">Quick demos showing how QuiKey works</p>
+                <a href="https://www.youtube.com/@QuiKey" target="_blank" rel="noopener" class="guides-channel-link">
+                    <span>View all videos on YouTube</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="guides-grid">
+                <a href="https://www.youtube.com/watch?v=8O6iTRXJvYs" target="_blank" rel="noopener" class="guide-card">
+                    <div class="guide-thumbnail">
+                        <img src="https://i.ytimg.com/vi/8O6iTRXJvYs/hqdefault.jpg" alt="Send to Gmail demo" loading="lazy">
+                        <div class="guide-play-overlay">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h4>Send to Gmail</h4>
+                        <p>Email files directly from Finder — just right-click and send</p>
+                        <span class="guide-tag">Getting Started</span>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=dBPMFkl6Slg" target="_blank" rel="noopener" class="guide-card">
+                    <div class="guide-thumbnail">
+                        <img src="https://i.ytimg.com/vi/dBPMFkl6Slg/hqdefault.jpg" alt="AI Chats demo" loading="lazy">
+                        <div class="guide-play-overlay">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h4>AI Chats</h4>
+                        <p>Chat with AI using your files — ask questions and get instant answers</p>
+                        <span class="guide-tag">AI Features</span>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=dFwDtDlG_uM" target="_blank" rel="noopener" class="guide-card">
+                    <div class="guide-thumbnail">
+                        <img src="https://i.ytimg.com/vi/dFwDtDlG_uM/hqdefault.jpg" alt="Compress Videos demo" loading="lazy">
+                        <div class="guide-play-overlay">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h4>Compress Videos</h4>
+                        <p>Shrink video files in 2 seconds — right-click and done</p>
+                        <span class="guide-tag">Media Tools</span>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=yS_0n3qlGmk" target="_blank" rel="noopener" class="guide-card">
+                    <div class="guide-thumbnail">
+                        <img src="https://i.ytimg.com/vi/yS_0n3qlGmk/hqdefault.jpg" alt="400+ AI Models demo" loading="lazy">
+                        <div class="guide-play-overlay">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h4>400+ AI Models</h4>
+                        <p>Access hundreds of AI models through OpenRouter integration</p>
+                        <span class="guide-tag">Advanced</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
@@ -746,6 +828,150 @@ const CONTACT_EMAIL = "info@quikey.app";
     font-weight: 700;
 }
 
+/* Video Guides Section */
+.guides {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+.guides-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.guides-header h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.guides-subtitle {
+    color: #6b7280;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.guides-channel-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ef4444;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 999px;
+    transition: all 0.2s;
+}
+
+.guides-channel-link:hover {
+    background: rgba(239, 68, 68, 0.15);
+    transform: translateY(-2px);
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.guide-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.guide-thumbnail {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #0f172a;
+    overflow: hidden;
+}
+
+.guide-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.guide-card:hover .guide-thumbnail img {
+    opacity: 0.8;
+}
+
+.guide-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.guide-card:hover .guide-play-overlay {
+    opacity: 1;
+}
+
+.guide-play-overlay svg {
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.guide-content {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.guide-content p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.guide-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    align-self: flex-start;
+}
+
 /* Features Section */
 .features {
     padding: 6rem 0;
@@ -1138,6 +1364,15 @@ const CONTACT_EMAIL = "info@quikey.app";
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .guides-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+    }
+
+    .guides-header h3 {
+        font-size: 2rem;
+    }
+
     .download-content {
         grid-template-columns: 1fr;
         gap: 2rem;
