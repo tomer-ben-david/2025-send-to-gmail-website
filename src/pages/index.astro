@@ -66,9 +66,9 @@ const CONTACT_EMAIL = "info@quikey.app";
                                 </div>
                                 <div class="social-proof">
                                     <div class="avatars">
-                                        <span class="avatar">👤</span>
-                                        <span class="avatar">👤</span>
-                                        <span class="avatar">👤</span>
+                                        <span class="avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M12 14c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg></span>
+                                        <span class="avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M12 14c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg></span>
+                                        <span class="avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M12 14c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg></span>
                                     </div>
                                     <span class="waitlist-count" id="waitlist-count">Join <strong>127+</strong> others on the waitlist</span>
                                 </div>
@@ -406,7 +406,6 @@ const CONTACT_EMAIL = "info@quikey.app";
                     <h3>Get Early Access</h3>
                     <div class="early-access-section">
                         <div class="early-access-card">
-                            <div class="app-icon-large">🚀</div>
                             <h4>Join the QuiKey Waitlist</h4>
                             <p class="early-access-description">
                                 We're carefully onboarding early users to ensure the best experience.
@@ -446,7 +445,7 @@ const CONTACT_EMAIL = "info@quikey.app";
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-large btn-glow">
-                                    🎉 Request Early Access
+                                    Request Early Access
                                 </button>
                             </form>
 
@@ -504,7 +503,9 @@ const CONTACT_EMAIL = "info@quikey.app";
                         </div>
                         <div class="download-box">
                             <div class="download-card">
-                                <div class="app-icon">📧</div>
+                                <div class="app-icon">
+    <Icon name="mail" class="icon-download" />
+</div>
                                 <h4>QuiKey</h4>
                                 <p class="version">Version v2025.12.01</p>
                                 <div class="download-buttons">
@@ -1276,6 +1277,12 @@ const CONTACT_EMAIL = "info@quikey.app";
 .app-icon {
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: #6366f1;
+}
+
+.icon-download {
+    width: 4rem;
+    height: 4rem;
 }
 
 .download-card h4 {
@@ -1569,6 +1576,12 @@ const CONTACT_EMAIL = "info@quikey.app";
     font-size: 0.75rem;
     margin-right: -8px;
     border: 2px solid white;
+    color: white;
+}
+
+.avatar svg {
+    width: 14px;
+    height: 14px;
 }
 
 .waitlist-count {
@@ -1596,6 +1609,12 @@ const CONTACT_EMAIL = "info@quikey.app";
     font-size: 4rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: #6366f1;
+}
+
+.icon-large {
+    width: 5rem;
+    height: 5rem;
 }
 
 .early-access-card h4 {

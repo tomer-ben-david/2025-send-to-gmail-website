@@ -16,7 +16,8 @@ export interface Props {
     | "chart"
     | "lock"
     | "check"
-    | "dash";
+    | "dash"
+    | "rocket";
   class?: string;
   title?: string;
 }
@@ -168,6 +169,16 @@ const common = {
   {name === "dash" && (
     <>
       <path d="M6 12h12" />
+    </>
+  )}
+
+  {name === "rocket" && (
+    <>
+      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.48-.56.93-1.23 1.35-2h-4.35z" />
+      <path d="M12 2l2.5 6h-5l2.5-6z" />
+      <path d="M12 8v7" />
+      <path d="M9 12l-3 3 3-1v-2z" />
+      <path d="M15 12l3 3-3-1v-2z" />
     </>
   )}
 </svg>
