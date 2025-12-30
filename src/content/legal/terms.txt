@@ -1,0 +1,179 @@
+Last Updated: December 2025
+
+By installing or using QuiKey ("the App"), you agree to these Terms of Service. If you do not agree, please do not use the App.
+
+1. ACCEPTANCE OF TERMS
+
+By installing QuiKey, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, do not install or use the application. Your continued use of the application after any modifications to these Terms constitutes acceptance of those changes.
+
+2. PERMITTED USE
+
+2.1 Affirmative Obligations. You expressly agree that you shall:
+(a) Use the application only for lawful purposes in compliance with all applicable laws;
+(b) Maintain current backups of all data you process through the application;
+(c) Verify all AI-generated output before relying on it for any purpose;
+(d) Secure your account credentials, API keys, and OAuth tokens;
+(e) Comply with all third-party service terms (Google, OpenAI, Anthropic, etc.);
+(f) Comply with applicable export control and sanctions laws, including US, EU, and Israeli regulations;
+(g) Be at least 18 years old (or have parental/guardian consent if under 18). The application is not intended for children under 13 (or under 16 in the EU without parental consent).
+
+2.2 Prohibited Uses. You expressly agree that you shall NOT:
+(a) Use the application to send spam, malware, or illegal content;
+(b) Reverse engineer, decompile, disassemble, or modify the application;
+(c) Use the application in any manner that violates third-party intellectual property rights;
+(d) Rely on AI output as professional advice (legal, medical, financial, or security);
+(e) Use the application in embargoed territories or transfer it to prohibited persons or entities.
+
+3. THIRD-PARTY SERVICES
+
+QuiKey integrates with third-party services including:
+• Google (Gmail, Drive, Gemini) - subject to Google's Terms of Service
+• OpenAI (ChatGPT) - subject to OpenAI's Terms of Use
+• Anthropic (Claude) - subject to Anthropic's Terms of Service
+• OpenRouter - subject to OpenRouter's Terms of Service
+• CloudConvert (optional PDF conversion fallback) - subject to CloudConvert's Terms
+• Lemon Squeezy (payments/licensing) - subject to Lemon Squeezy's Terms
+
+Your use of these services through QuiKey is governed by their respective terms.
+
+3.1 AI FEATURES: RISKS AND COMPLIANCE
+You are solely responsible for ensuring your use of AI features complies with applicable laws and regulations (including the EU AI Act where applicable). QuiKey connects you to third-party AI services and does not control model behavior, training data, or outputs. AI responses may be inaccurate, biased, inappropriate, or harmful. You are responsible for reviewing and verifying any AI output before acting on it.
+
+3.2 LICENSE AND OWNERSHIP
+QuiKey's Developer grants you a limited, non-exclusive, non-transferable, revocable license to use the application for its intended purpose. QuiKey's Developer retains all intellectual property rights in the application. You retain ownership of your content, but you grant QuiKey's Developer a limited license to process and transmit your content as necessary to perform actions you initiate (including sending content to third-party services you select).
+
+4. API KEYS AND AUTHENTICATION
+
+• OAuth tokens and API keys are stored locally in encrypted form on your device
+• You are responsible for managing and securing your own API keys
+• QuiKey does not collect your API keys; they are used only to communicate directly with the provider(s) you configure
+
+Security: In the event we discover a security vulnerability that could affect the confidentiality of locally stored credentials, we will make reasonable efforts to notify affected users via the application or our website. However, because we do not collect or have access to your API keys, we cannot determine which specific accounts may have been affected, and you remain responsible for monitoring your API provider accounts for unauthorized activity. We will notify you of any security breach involving your personal data as required by applicable law.
+
+You are solely responsible for all costs, usage charges, rate limit violations, account suspensions, or overruns incurred with your API keys or third-party accounts. This includes charges resulting from:
+- Your configuration or usage patterns;
+- Third-party service changes, outages, or pricing modifications;
+- Application bugs or errors (unless caused by our gross negligence or willful misconduct, where such limitation is prohibited by law);
+- Compromised or stolen API keys;
+- Automated processes or background operations you enable.
+
+We are not liable for charges exceeding your expectations. You acknowledge that API-based applications can generate substantial costs and agree to monitor your usage and set billing limits with your providers.
+
+5. NO WARRANTY
+
+THE APPLICATION IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APPLICATION WILL BE ERROR-FREE, SECURE, OR UNINTERRUPTED.
+
+WE SPECIFICALLY DISCLAIM ANY WARRANTY OF ACCURACY, RELIABILITY, OR COMPLETENESS OF AI-GENERATED CONTENT OR AUTOMATED OPERATIONS PERFORMED BY THE APPLICATION. YOU ACKNOWLEDGE THAT AI MODELS MAY PRODUCE INCORRECT, INCOMPLETE, BIASED, OR HARMFUL OUTPUT.
+
+We are not responsible for third-party service changes, deprecations, outages, or interruptions beyond our reasonable control.
+
+For consumers in the United Kingdom, nothing in this Section affects your statutory rights under the Consumer Rights Act 2015, including your right to receive digital content of satisfactory quality, fit for purpose, and as described.
+
+For consumers in Australia, nothing in this Section excludes, restricts, or modifies any consumer guarantee, right, or remedy under the Australian Consumer Law (ACL) or other applicable law that cannot be lawfully excluded. Our liability under the ACL is limited to the extent permitted by law.
+
+6. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL QUIKEY'S DEVELOPER, ITS CONTRACTORS, AGENTS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE APPLICATION, INCLUDING LOSS OF DATA, FILES, PROFITS, REVENUE, OR BUSINESS INTERRUPTION.
+
+THIS INCLUDES, WITHOUT LIMITATION AND BY WAY OF EXAMPLE ONLY, LOSS OR CORRUPTION OF DATA (INCLUDING WHERE YOU FAILED TO MAINTAIN BACKUPS), DELETION OF THIRD-PARTY CONTENT (GMAIL/DRIVE), LOSS OF ACCESS TO A DEVICE OR ACCOUNT, SYSTEM DAMAGE, DOWNTIME, OR ANY OTHER DAMAGES OR LOSSES OF ANY KIND WHATSOEVER.
+
+THESE LIMITATIONS APPLY EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND EVEN IF A REMEDY FAILS OF ITS ESSENTIAL PURPOSE.
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL LIABILITY FOR ALL CLAIMS RELATING TO THE APPLICATION SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID FOR THE APPLICATION IN THE 12 MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM OR (B) $50 USD (OR THE EQUIVALENT IN THE CURRENCY WHERE THE CLAIM IS BROUGHT, CONVERTED USING THE OFFICIAL EXCHANGE RATE PUBLISHED BY THAT JURISDICTION'S CENTRAL BANK ON THE DATE THE CLAIM IS FILED).
+
+For consumers in the United Kingdom, this limitation of liability does not affect your statutory rights under the Consumer Rights Act 2015.
+
+For consumers in Australia, our liability is limited to the extent permitted by the Australian Consumer Law.
+
+7. INDEMNIFICATION
+
+You agree to indemnify, defend, and hold us harmless from any claims, damages, liabilities, and expenses (including reasonable legal fees and costs) arising from:
+(a) Your use of the application;
+(b) Content you create, send, or process through the application;
+(c) Your violation of these terms or any third-party terms;
+(d) Your API keys being compromised or misused; or
+(e) Claims by third parties (including Google, AI providers, email recipients, or data subjects) related to your use of the application.
+
+You will cooperate fully with us in the defense of any claim. We reserve the right to assume exclusive control of the defense and settlement of any claim subject to indemnification, and you will not settle any claim without our prior written consent.
+
+Where you are a consumer in the European Union, United Kingdom, Australia, Canada, or other jurisdiction that prohibits or limits consumer indemnification obligations, this Section 7 applies only to the extent permitted by mandatory law.
+
+8. GOVERNING LAW AND DISPUTES
+
+8.1 Governing Law and Venue
+These Terms are governed by the laws of the State of Israel, without regard to its conflict of law principles and excluding the United Nations Convention on Contracts for the International Sale of Goods (CISG). Subject to Section 8.2, you agree that any legal action or proceeding arising from these Terms or your use of the application shall be brought exclusively in the competent courts of Tel Aviv-Yafo, Israel. You irrevocably submit to the jurisdiction and venue of such courts and waive any objection based on inconvenient forum, lack of personal jurisdiction, or improper venue.
+
+For purposes of service of process in any legal proceeding, you consent to service via email at any email address you have provided to us or associated with your license, in addition to any other methods permitted by applicable law.
+
+8.2 Mandatory Consumer Rights
+If you are a consumer residing in a jurisdiction where consumer protection laws explicitly prohibit contractual waivers of consumer rights, forum selection clauses, or choice of law provisions (including the European Union, United Kingdom, Australia, and Canada), then to the extent—and only to the extent—those mandatory laws provide protections that cannot be waived by contract:
+(a) Those mandatory protections apply;
+(b) You may bring claims in your local courts as expressly required by those laws;
+(c) All other provisions of these Terms remain in full force and effect.
+
+For purposes of this Section, "consumer" means an individual using the application primarily for personal, family, or household purposes and not for business, commercial, or professional purposes. Examples of non-consumer (business) use include using the application to manage company email, process client data, or perform work for an employer.
+
+Consumer protection laws that regulate specific practices (e.g., refund rights, cancellation periods, warranty standards) but do not prohibit forum selection or choice of law clauses do not override Section 8.1.
+
+8.3 Individual Disputes; Class Action Waiver
+You agree to resolve disputes with us on an individual basis only. You waive any right to bring or participate in class actions, collective proceedings, mass arbitrations, or representative actions, except where prohibited by mandatory law. This waiver does not prevent you from bringing individual claims in small claims court if your claim qualifies under that court's jurisdictional limits.
+
+Opt-Out: You may opt out of this class action waiver by sending written notice to support@quikey.app within 30 days of first using the application. Your notice must include your name and a statement that you wish to opt out of the class action waiver. If you opt out, you may pursue claims as part of a class action, but all other provisions of these Terms still apply.
+
+9. TERMINATION
+
+We may suspend or terminate your access to paid features or services (if applicable) if you violate these terms or applicable law. You may stop using the application at any time by uninstalling it. Sections 5, 6, 7, 8, 12, 13, 14, and 15 survive termination.
+
+9.1 Refund Policy
+For purchases made through the Apple App Store, refunds are handled through Apple's standard refund process. For direct purchases (if applicable), contact support@quikey.app to request a refund. Refunds are provided at our sole discretion, except where mandatory consumer law requires otherwise (including EU/UK cancellation rights and Australian Consumer Law remedies).
+
+10. PRIVACY AND DATA COLLECTION
+
+10.1 Local Storage: OAuth tokens, API keys, and application settings are stored locally on your device in encrypted form. We do not transmit or access this data. We do not sell, share, or rent your personal information to third parties. We do not use your data for targeted advertising.
+
+10.2 Optional Analytics: If you enable analytics in Settings (disabled by default), the application may collect pseudonymous usage statistics and crash reports and transmit them to our servers to improve functionality. This data is anonymized to the extent technically feasible but may include device identifiers that could theoretically be linked to you. We do not attempt to identify individual users. To opt out: Go to Settings → General → Disable "Send usage metrics". You may withdraw consent at any time by disabling this setting.
+
+California residents: Disabling this setting serves as your opt-out of data "sharing" for cross-context behavioral advertising under CCPA/CPRA to the extent applicable. You may also request deletion of analytics data by emailing support@quikey.app, and we will make reasonable efforts to honor your request.
+
+10.3 Privacy Policy: For complete details about data collection, use, and your rights, see our Privacy Policy within the application and at https://quikey.app/privacy. The Privacy Policy is incorporated into these Terms by reference. In the event of any conflict between these Terms and the Privacy Policy regarding data practices, the Privacy Policy shall control as to data protection matters.
+
+10.4 Data Controller: For purposes of data protection laws (including GDPR), the data controller for any personal data processed by the application is QuiKey's Developer. Contact: support@quikey.app. Postal address: available upon request.
+
+11. MODIFICATIONS
+
+We may modify these Terms at any time. When we make changes, we will:
+(a) Post the updated Terms within the application;
+(b) Update the "Last Updated" date at the top of this document; and
+(c) For material changes, provide notice via the application or other reasonable means.
+
+Material changes include changes to Sections 5, 6, 7, 8, 9, or 10, or any changes that substantially reduce your rights or increase your obligations.
+
+Changes become effective 30 days after posting (the "Effective Date"), unless we specify a different date. Your continued use of the application after the Effective Date constitutes acceptance of the modified Terms. If you do not agree to changes, you must stop using the application before the Effective Date.
+
+12. SEVERABILITY
+
+If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it enforceable, or if not possible, severed from these Terms. The remaining provisions shall continue in full force and effect.
+
+13. FORCE MAJEURE
+
+We are not liable for any failure or delay in performance due to causes beyond our reasonable control, including acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, earthquakes, accidents, network failures, strikes, shortages of transportation facilities, fuel, energy, labor, or materials.
+
+14. ASSIGNMENT
+
+You may not assign or transfer these Terms or your rights under these Terms without our prior written consent. We may assign these Terms (including to an acquirer of our business) without restriction. Any attempted assignment in violation of this Section is void.
+
+15. ENTIRE AGREEMENT
+
+These Terms, together with our Privacy Policy and any applicable platform terms, constitute the entire agreement between you and us regarding the application and supersede all prior or contemporaneous understandings, agreements, representations, and warranties, whether written or oral. Where the application is distributed through a platform, that platform's terms govern the purchase transaction and platform relationship only. These Terms govern your use of the application. In case of conflict, the provisions of these Terms control to the extent permitted by law, except where mandatory consumer law requires otherwise.
+
+16. WAIVER
+
+No waiver of any provision of these Terms shall be deemed a further or continuing waiver of such provision or any other provision. Our failure to enforce any right or provision of these Terms shall not constitute a waiver of such right or provision.
+
+17. CONTACT AND LEGAL NOTICES
+
+Questions about these Terms? Email support@quikey.app
+
+For legal notices or formal communications: support@quikey.app
+
+We will communicate with you via email or in-app notifications. You consent to receive legal notices electronically.
