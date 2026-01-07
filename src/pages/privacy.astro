@@ -7,25 +7,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="container">
             <div class="privacy-content">
                 <h1>Privacy Policy</h1>
-                <p class="last-updated">Last updated: December 26, 2025</p>
+                <p class="last-updated">Last updated: January 2026</p>
 
-                <h2>What QuiKey Does</h2>
                 <p>
-                    QuiKey is a macOS utility that adds actions to Finder (files/folders) and to selected text via the system Services menu.
-                    It can send files to Gmail, upload to Google Drive, analyze files or selected text with AI, convert to PDF, compress media, and schedule backups.
+                    QuiKey is committed to protecting your privacy. This policy explains how we handle your data.
                 </p>
 
-                <h2>Your Data</h2>
-                <p>
-                    QuiKey stores your settings <strong>locally on your Mac</strong>.
-                    OAuth tokens and API keys are stored <strong>encrypted</strong>.
-                </p>
-                <p>
-                    When you run an action, your files or selected text are sent directly to the relevant service
-                    (Google, AI providers, etc.) — not through a QuiKey file-processing server.
-                </p>
+                <h2>1. Data Collection and Storage</h2>
+                <p><strong>Local Data (stored only on your device):</strong></p>
+                <ul>
+                    <li>Authentication tokens (stored locally in encrypted form)</li>
+                    <li>API keys (stored locally in encrypted form)</li>
+                    <li>Send history and preferences</li>
+                    <li>Application logs (for debugging)</li>
+                    <li>AI conversation history</li>
+                </ul>
 
-                <h2>Third-Party Services</h2>
+                <p><strong>We do NOT store:</strong></p>
+                <ul>
+                    <li>Your files or their contents on our servers</li>
+                    <li>Your emails or attachments</li>
+                    <li>Your Google account credentials</li>
+                </ul>
+
+                <h2>2. Data Handling</h2>
+                <ul>
+                    <li>Files are sent directly to Google/AI services — we do not intercept or store them.</li>
+                    <li>Sensitive tokens and API keys are stored locally in encrypted form.</li>
+                    <li>Logs are stored locally and can be deleted at any time.</li>
+                </ul>
+
+                <h2>3. Third-Party Services</h2>
                 <p>QuiKey connects to these services based on your actions:</p>
                 <ul>
                     <li><strong>Google</strong> (Gmail, Drive, Gemini) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
@@ -33,24 +45,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <li><strong>Anthropic</strong> (Claude) — <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a></li>
                     <li><strong>OpenRouter</strong> (optional AI routing) — <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">OpenRouter Privacy Policy</a></li>
                     <li><strong>CloudConvert</strong> (optional PDF conversion fallback) — <a href="https://cloudconvert.com/privacy" target="_blank" rel="noopener">CloudConvert Privacy Policy</a></li>
-                    <li><strong>Lemon Squeezy</strong> (payments) — <a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener">Lemon Squeezy Privacy Policy</a></li>
+                    <li><strong>Lemon Squeezy</strong> (payments and licensing) — <a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener">Lemon Squeezy Privacy Policy</a></li>
                 </ul>
-                <p>These services have their own privacy practices.</p>
+                <p>All communication with third-party services uses HTTPS.</p>
 
-                <h2>Analytics</h2>
+                <h2>4. Optional Analytics</h2>
                 <p>
-                    If enabled in Settings, QuiKey may send pseudonymous usage statistics (feature usage, success/failure rates) to help improve the app.
-                    <strong>You can disable this</strong> at any time in Settings.
+                    If enabled in Settings (disabled by default), QuiKey may collect pseudonymous usage and diagnostic data (feature usage, success/failure rates, performance metrics, and error events) to help improve the app.
                 </p>
-                <p>Analytics is anonymized to the extent technically feasible but may include a device identifier; we do not attempt to identify individual users.</p>
-                <p>We do not include your file contents in analytics events. If you use AI features, your prompt/file content is sent to the provider you selected.</p>
-                <p>To opt out: Go to Settings → General → Disable “Send usage metrics”.</p>
+                <ul>
+                    <li>A pseudonymous device identifier generated by the application is used to associate events from the same device.</li>
+                    <li>Analytics may be processed by us and/or service providers (e.g., PostHog).</li>
+                    <li><strong>No file contents, email contents, recipients, or attachments are included</strong> in analytics events.</li>
+                </ul>
+                <p>To opt out: Go to Settings → General → Disable “Send usage metrics”. You may withdraw consent at any time.</p>
 
-                <h2>Updates</h2>
-                <p>We may update this policy. Check back occasionally.</p>
+                <h2>5. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li><strong>Access your data:</strong> All data is stored locally on your Mac.</li>
+                    <li><strong>Delete your data:</strong>
+                        <ul>
+                            <li>Preferences: Use "Reset to Defaults" in Settings.</li>
+                            <li>History: Clear from the History tab.</li>
+                            <li>Logs: Delete from <code>~/Library/Application Support/QuiKey/Logs</code>.</li>
+                            <li>Complete removal: Uninstall the app and delete the QuiKey application support folder.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Opt out of analytics:</strong> Disable in Settings → General.</li>
+                    <li><strong>Revoke Google access:</strong> Remove QuiKey from your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a>.</li>
+                </ul>
 
-                <h2>Contact</h2>
-                <p>Questions? Email <a href="mailto:support@quikey.app">support@quikey.app</a></p>
+                <h2>6. Data Security</h2>
+                <ul>
+                    <li>OAuth tokens and API keys are stored locally in encrypted form.</li>
+                    <li>We do not upload your files or file contents to our servers.</li>
+                    <li>All communication with third-party services uses encrypted HTTPS connections.</li>
+                </ul>
+
+                <h2>7. Children's Privacy</h2>
+                <p>
+                    QuiKey is not intended for children under 13. We do not knowingly collect personal data from children.
+                </p>
+
+                <h2>8. Contact</h2>
+                <p>Questions about this policy? Email <a href="mailto:support@quikey.app">support@quikey.app</a></p>
                 <p>See also: <a href="/terms">Terms of Service</a></p>
             </div>
         </div>
@@ -82,11 +121,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .privacy-content h2 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-weight: 600;
         color: #1f2937;
-        margin-top: 2rem;
-        margin-bottom: 0.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 0.5rem;
     }
 
     .privacy-content p {
@@ -98,7 +139,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .privacy-content ul {
         color: #4b5563;
         line-height: 1.7;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         padding-left: 1.5rem;
     }
 
@@ -117,6 +158,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .privacy-content strong {
         color: #1f2937;
+    }
+
+    .privacy-content code {
+        background: #f3f4f6;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9em;
     }
 
     @media (max-width: 768px) {
