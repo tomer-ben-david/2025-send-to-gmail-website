@@ -45,6 +45,18 @@ npm run build
 
 The website is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
+## Onboarding Videos
+
+Onboarding videos are distributed via the GitHub release `onboarding-v1` in this repo.
+Current assets include:
+
+- `value_demo.mp4`
+- `onboarding_drive.mp4`
+- `onboarding_pdf.mp4`
+- `onboarding_ai.mp4`
+- `onboarding_notifications.mp4`
+- `onboarding_claude_cli.mp4`
+
 ## Community
 
 Stay up to date with QuiKey:
