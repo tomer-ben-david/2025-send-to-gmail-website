@@ -1,6 +1,6 @@
 # QuiKey - Website
 
-This is the official website for QuiKey, a macOS Finder right-click enhancement tool.
+This is the official website for QuiKey, a macOS right-click enhancement tool.
 
 ## Live Website
 
@@ -8,16 +8,16 @@ The website is hosted at: `https://quikey.app`
 
 ## About QuiKey
 
-QuiKey is a macOS app that supercharges your Finder right-click menu. The primary feature, "Send to Gmail", lets you select files in Finder, right-click, and send them as Gmail attachments.
+QuiKey is a macOS app that supercharges your Finder and selected-text right-click menus. It adds fast file actions in Finder and AI actions for text in any app.
 
 ### Features
 
-- Right-click files in Finder → Services → "Send to Gmail"
-- OAuth 2.0 authentication with Google
-- Progress indicators with visual feedback
-- macOS notifications on completion
-- Auto-send mode (optional)
-- Smart email subject lines based on file selection
+- Finder right-click actions: Upload to Drive, Analyze with ChatGPT/Gemini/Claude, Convert to PDF, Compress video
+- Selected-text actions: Analyze, Translate, Define, Summarize, Explain, Grammar check (ChatGPT/Gemini/Claude)
+- AI Chats with file context, history, and exports
+- AI Squads (multi-step workflows across providers)
+- OpenRouter model catalog for chats and squads
+- Templates, history, and usage statistics inside the app
 
 ## Website Structure
 

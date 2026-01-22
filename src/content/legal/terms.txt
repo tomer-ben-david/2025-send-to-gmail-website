@@ -29,7 +29,7 @@ By installing QuiKey, you acknowledge that you have read, understood, and agree 
 3. THIRD-PARTY SERVICES
 
 QuiKey integrates with third-party services including:
-• Google (Gmail, Drive, Gemini) - subject to Google's Terms of Service
+• Google (Drive, Gemini) - subject to Google's Terms of Service
 • OpenAI (ChatGPT) - subject to OpenAI's Terms of Use
 • Anthropic (Claude) - subject to Anthropic's Terms of Service
 • OpenRouter - subject to OpenRouter's Terms of Service
@@ -86,7 +86,7 @@ For consumers in Australia, nothing in this Section excludes, restricts, or modi
 
 IN NO EVENT SHALL XPLOR GAMES LLC, ITS CONTRACTORS, AGENTS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE APPLICATION, INCLUDING LOSS OF DATA, FILES, PROFITS, REVENUE, OR BUSINESS INTERRUPTION.
 
-THIS INCLUDES, WITHOUT LIMITATION AND BY WAY OF EXAMPLE ONLY, LOSS OR CORRUPTION OF DATA (INCLUDING WHERE YOU FAILED TO MAINTAIN BACKUPS), DELETION OF THIRD-PARTY CONTENT (GMAIL/DRIVE), LOSS OF ACCESS TO A DEVICE OR ACCOUNT, SYSTEM DAMAGE, DOWNTIME, OR ANY OTHER DAMAGES OR LOSSES OF ANY KIND WHATSOEVER.
+THIS INCLUDES, WITHOUT LIMITATION AND BY WAY OF EXAMPLE ONLY, LOSS OR CORRUPTION OF DATA (INCLUDING WHERE YOU FAILED TO MAINTAIN BACKUPS), DELETION OF THIRD-PARTY CONTENT (DRIVE), LOSS OF ACCESS TO A DEVICE OR ACCOUNT, SYSTEM DAMAGE, DOWNTIME, OR ANY OTHER DAMAGES OR LOSSES OF ANY KIND WHATSOEVER.
 
 THESE LIMITATIONS APPLY EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND EVEN IF A REMEDY FAILS OF ITS ESSENTIAL PURPOSE.
 
@@ -103,7 +103,7 @@ You agree to indemnify, defend, and hold us harmless from any claims, damages, l
 (b) Content you create, send, or process through the application;
 (c) Your violation of these terms or any third-party terms;
 (d) Your API keys being compromised or misused; or
-(e) Claims by third parties (including Google, AI providers, email recipients, or data subjects) related to your use of the application.
+(e) Claims by third parties (including Google, AI providers, or data subjects) related to your use of the application.
 
 You will cooperate fully with us in the defense of any claim. We reserve the right to assume exclusive control of the defense and settlement of any claim subject to indemnification, and you will not settle any claim without our prior written consent.
 

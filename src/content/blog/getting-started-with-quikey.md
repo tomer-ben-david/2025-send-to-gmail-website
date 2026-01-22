@@ -1,33 +1,31 @@
 ---
-title: "Getting Started with QuiKey: Send Files and Text to Any Service in Seconds"
-description: "A complete guide to QuiKey - the macOS app that adds Gmail, Google Drive, ChatGPT, and Gemini to your right-click menu. Stop switching apps. Start getting things done."
+title: "Getting Started with QuiKey: Right-Click Actions for Files and Text"
+description: "A complete guide to QuiKey — the macOS app that adds Drive, AI analysis, PDF tools, and text actions to your right-click menu."
 slug: "getting-started-with-quikey"
 pubDate: 2025-12-01
 author: "QuiKey Team"
-tags: ["QuiKey", "macOS", "Productivity", "Gmail", "Google Drive", "ChatGPT", "Gemini", "Tutorial"]
+tags: ["QuiKey", "macOS", "Productivity", "Google Drive", "ChatGPT", "Gemini", "Claude", "OpenRouter", "Tutorial"]
 ---
 
-You're working on something. You have a file you need to email. Or upload to Drive. Or analyze with AI.
+You're working on something. You have a file you need to upload, compress, or analyze. Or a block of text you want explained.
 
-The normal workflow: Open browser. Navigate to Gmail. Click compose. Attach file. Type subject. Send. Five minutes gone for a 10-second task.
+The normal workflow: open a browser tab, navigate to a service, find the file, upload it, wait, repeat. Five minutes gone for a 10-second task.
 
-QuiKey fixes this. Right-click any file, pick a service, done.
+QuiKey fixes this. Right-click any file or selected text, pick an action, done.
 
 ## What QuiKey Actually Does
 
-QuiKey is a macOS app that puts your most-used services in the right-click menu. Select a file in Finder, right-click, and you'll see options to:
+QuiKey is a macOS app that adds your most-used actions directly to the right-click menu. In Finder, you can:
 
-- **Send to Gmail** - Email files to yourself or anyone, with optional subject and body
-- **Upload to Google Drive** - Put files in Drive with one click, pick the folder
-- **Analyze with ChatGPT** - Send files to ChatGPT and ask questions about them
-- **Analyze with Gemini** - Same thing, but with Google's AI
-- **Convert to PDF** - Turn documents into PDFs without leaving Finder
+- **Upload to Google Drive** — Send files to Drive from Finder, with folder selection
+- **Analyze with AI** — Send files to ChatGPT, Gemini, or Claude for analysis
+- **Convert to PDF** — Convert documents and images without leaving Finder
+- **Compress video** — Reduce video and GIF size for easier sharing
 
-It also works with text. Select text in any app, right-click, and you can:
+It also works with selected text in any app. Right-click selected text and you can:
 
-- Analyze, translate, define, summarize, or explain it using ChatGPT or Gemini
-- Check grammar
-- Get instant AI-powered answers without copy-pasting into a browser
+- Analyze, translate, define, summarize, explain, or grammar-check
+- Choose ChatGPT, Gemini, or Claude for the response
 
 The key thing: you never leave what you're doing. No app switching. No browser tabs. No interruption to your flow.
 
@@ -35,138 +33,91 @@ The key thing: you never leave what you're doing. No app switching. No browser t
 
 Download QuiKey and open it. The first thing you'll see is a setup wizard that walks you through:
 
-1. **Google sign-in** - This lets QuiKey send emails and upload to Drive on your behalf
-2. **AI setup** - Either sign in to ChatGPT/Gemini in the browser, or paste your API key
-3. **macOS permissions** - You need to enable QuiKey's services in System Settings
+1. **Google sign-in** — Required for Google Drive uploads
+2. **AI setup** — Provide API keys, use browser mode, or use Claude CLI subscription mode
+3. **macOS permissions** — Enable QuiKey services in System Settings
 
-That last step is important. macOS requires explicit permission for apps to add items to the right-click menu. QuiKey will guide you through it, but essentially you go to System Settings → Privacy & Security → Extensions → Finder Extensions and enable QuiKey.
+That last step is important. macOS requires explicit permission for apps to add items to the right-click menu. QuiKey guides you there, but the path is:
+
+System Settings → Keyboard → Keyboard Shortcuts → Services
 
 Once that's done, you're set.
 
-## Sending Files to Gmail
-
-Right-click any file (or multiple files) and select "Send to Gmail."
-
-What happens next depends on your settings:
-
-- **Automatic mode**: File gets emailed to your default address immediately. You get a notification when it's done.
-- **Show dialog mode**: A preview window opens where you can edit the subject, body, recipients, and labels before sending.
-- **Save as draft mode**: Email gets saved as a draft in Gmail so you can review it later.
-
-Most people start with dialog mode until they trust the workflow, then switch to automatic for speed.
-
-Pro tip: If you're emailing files to yourself often (sending receipts to your "taxes" folder, saving articles for later), set up a default recipient and use automatic mode. It becomes a one-click operation.
-
 ## Uploading to Google Drive
 
-Same idea. Right-click, pick "Upload to Drive."
+Right-click any file (or multiple files) and select **Upload to Drive**.
 
 You can configure:
 - A default folder (so files always go to the same place)
 - Whether to show a dialog to pick the folder each time
 - Optional comments on the uploaded file
 
-The dialog shows you a folder tree so you can navigate your Drive structure. This is genuinely faster than opening Drive in a browser and dragging files around.
-
-One nice touch: if a file is too big for Gmail's attachment limit, QuiKey will offer to upload it to Drive instead and email you a link.
+The dialog shows you a folder tree so you can navigate your Drive structure. This is faster than opening Drive in a browser and dragging files around.
 
 ## Analyzing Files with AI
 
-This is where it gets interesting.
+Right-click a file, pick **Analyze with ChatGPT**, **Analyze with Gemini**, or **Analyze with Claude**. A dialog opens asking what you want to know about the file.
 
-Right-click a file, pick "Analyze with ChatGPT" or "Analyze with Gemini." A dialog opens asking what you want to know about the file.
-
-Use cases that actually work well:
-- **PDFs**: "Summarize this contract" or "What are the key dates mentioned?"
-- **Images**: "What's in this screenshot?" or "Extract the text from this image"
-- **Code files**: "Explain what this function does" or "Find potential bugs"
+Use cases that work well:
+- **PDFs**: "Summarize this contract" or "What are the key dates?"
+- **Images**: "What's in this screenshot?" or "Extract the text"
+- **Code files**: "Explain what this function does" or "Find bugs"
 - **Spreadsheets**: "What trends do you see in this data?"
 
 The AI sees the actual file contents, not just the filename. So it can give meaningful answers.
 
-You can choose between browser mode (uses your ChatGPT/Gemini session in a webview) or API mode (uses your API key directly). Browser mode is free if you have a ChatGPT Plus or Gemini subscription. API mode costs per request but is faster and more reliable.
+You can choose between:
+- **Browser mode** (uses your web session where supported)
+- **API mode** (uses your API key directly)
+- **Claude CLI mode** (if you have a Claude CLI subscription)
+
+API mode is typically faster and more reliable for frequent use.
+
+## Convert to PDF and Compress Video
+
+These are the zero-friction utilities:
+
+- **Convert to PDF**: convert images and documents instantly, with merge options and quality settings.
+- **Compress video**: shrink large video files and GIFs for faster sharing.
+
+Both actions run from Finder right-click and complete with a system notification.
 
 ## Text Selection Services
 
 Select any text in any app. Right-click. You'll see QuiKey's text services:
 
-- **Analyze** - General "what is this?" query
-- **Translate** - Translate to your configured language
-- **Define** - Dictionary-style definitions
-- **Summarize** - Condense long text
-- **Explain** - Simplify complex text
-- **Grammar Check** - Fix writing errors
+- **Analyze** — General "what is this?"
+- **Translate** — Translate to your configured language
+- **Define** — Dictionary-style definitions
+- **Summarize** — Condense long text
+- **Explain** — Simplify complex text
+- **Grammar Check** — Fix writing errors
 
-Each one opens a small dialog with the AI's response. You can copy the result or continue the conversation.
+Each action opens a small dialog with the AI's response. You can copy the result or continue the conversation.
 
-This is genuinely useful for:
-- Reading technical docs and needing quick explanations
-- Working with content in other languages
-- Editing your own writing
+## AI Chats and AI Squads
 
-## The Home Dashboard
+Inside the app, you also get:
 
-When you open QuiKey's main window, you see a dashboard showing:
+- **AI Chats** — Ongoing conversations with files, follow-ups, and local history
+- **AI Squads** — Multi-step workflows where multiple providers collaborate on one output
+- **OpenRouter models** — Access a large catalog of models for chats and squads
 
-- Which services are enabled and working
-- Quick action buttons for common tasks
-- A drag-and-drop zone if you prefer that to right-clicking
+If you want a single place to run complex AI workflows on your files, this is it.
 
-The History tab shows everything you've sent - emails, uploads, AI conversations. You can reopen past AI conversations to continue them.
+## History and Statistics
 
-## Configuring Services
-
-In Settings, you can fine-tune each service:
-
-**Gmail settings:**
-- Default recipient email
-- Subject line template (can include filename)
-- Body template
-- Default labels to apply
-- Send behavior (automatic, dialog, draft)
-
-**Drive settings:**
-- Default upload folder
-- Comment template
-- Upload behavior
-
-**AI settings:**
-- Browser vs API mode
-- API keys
-- Default prompts
-- Conversation preferences
-
-**Text selection:**
-- Which services to show in the menu
-- Translation target language
-- Custom prompts for each action
+The History tab shows what you ran and when. You can reopen past AI conversations and filter by provider. The Statistics tab shows usage summaries over time.
 
 ## Tips for Getting the Most Out of It
 
-**Start with what you do often.** If you email yourself files constantly, set up Gmail with automatic mode. If you're always uploading to the same Drive folder, configure that default. Don't try to use everything at once.
-
-**Use the menu bar icon.** QuiKey sits in your menu bar. Click it for quick access to the main window, or to drag files directly.
-
-**Keyboard shortcut for AI.** If you analyze text frequently, the right-click menu is still an interruption. Consider setting up a system-wide shortcut to trigger QuiKey's text analysis directly.
-
-**Check the history.** If you forget whether you sent something or want to find an old AI conversation, it's all in the History tab.
-
-**API mode for reliability.** Browser automation is clever but can break when sites update. If AI analysis is part of your core workflow, API mode is more reliable (and usually faster).
-
-## What Problems This Solves
-
-The real value isn't any single feature. It's eliminating the friction between "I want to do this thing" and "the thing is done."
-
-Before QuiKey: You think "I should email this to the accountant." You open Gmail. You compose a new email. You find the file. You attach it. You write a subject. You send. Maybe 2 minutes if you're fast.
-
-With QuiKey: Right-click, Send to Gmail, type subject, send. 15 seconds.
-
-That 90-second savings doesn't sound like much. But if you're doing these small tasks 20 times a day, you've bought yourself an extra 30 minutes. More importantly, you never broke focus. You never left your flow.
-
-That's what QuiKey is for. It's not flashy. It's just faster.
+- **Start with what you do often.** Set a default Drive folder if you upload frequently.
+- **Use the menu bar icon.** Quick access to the main window and drag-and-drop.
+- **Prefer API mode for reliability.** Browser automation can break when sites change.
+- **Check History.** It's the fastest way to reopen a past AI conversation.
 
 ## Getting Started
 
-Download QuiKey from [quikey.app](https://quikey.app). The free tier gives you enough to see if it fits your workflow. If it does, the pro tier removes limits and adds some extra features.
+Download QuiKey from [quikey.app](https://quikey.app). The free tier gives you enough to see if it fits your workflow. If it does, the Pro tier removes limits and adds advanced customization.
 
 Questions? Email us or open an issue on GitHub. We actually read them.

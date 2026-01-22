@@ -20,7 +20,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     </p>
                     <p><strong>Google User Data:</strong> QuiKey requests the following permissions (scopes):</p>
                     <ul>
-                        <li><strong>Send email on your behalf</strong> (<code>gmail.send</code>): Used to send files and messages as emails from your account.</li>
                         <li><strong>See and download your Google Drive files</strong> (<code>drive.file</code> and <code>drive.metadata.readonly</code>): Used to upload files to your Drive and list folders for destination selection.</li>
                         <li><strong>See your primary Google Account email address</strong> (<code>userinfo.email</code>): Used to identify your account and display which account is currently logged in.</li>
                     </ul>
@@ -29,7 +28,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <h2>2. Data Usage</h2>
                     <p>We use the accessed data exclusively to perform actions initiated by you:</p>
                     <ul>
-                        <li>Composing and sending emails from your account.</li>
                         <li>Listing and searching for folders to help you select a file destination.</li>
                         <li>Uploading or saving files to your cloud storage.</li>
                         <li>Displaying your account email for session management within the app.</li>
@@ -47,8 +45,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <h2>4. Data Sharing</h2>
                     <p>We do not share your personal data with any third parties, except:</p>
                     <ul>
-                        <li>With the <strong>service provider</strong> to fulfill the action you initiated (such as sending an email or uploading a file).</li>
-                        <li>If explicitly directed by you (e.g., sending a file to a specific recipient).</li>
+                        <li>With the <strong>service provider</strong> to fulfill the action you initiated (such as uploading a file).</li>
+                        <li>If explicitly directed by you (e.g., uploading a file to a specific destination).</li>
                         <li>With <strong>AI providers</strong> (like OpenAI or Anthropic) <strong>only if and when</strong> you explicitly use a feature that involves processing a file or text through those specific services. Only the selected content is transmitted.</li>
                     </ul>
                     <p><strong>AI/ML Training Disclosure:</strong> Data obtained from Google APIs is never used to train generalized AI/ML models. We maintain strict data segregation between Google API services and third-party AI integrations.</p>
@@ -57,7 +55,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <h2>5. Third-Party Services</h2>
                 <p>QuiKey connects to these services based on your actions:</p>
                 <ul>
-                    <li><strong>Google</strong> (Gmail, Drive, Gemini) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+                    <li><strong>Google</strong> (Drive, Gemini) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
                     <li><strong>OpenAI</strong> (ChatGPT) — <a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></li>
                     <li><strong>Anthropic</strong> (Claude) — <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a></li>
                     <li><strong>OpenRouter</strong> (optional AI routing) — <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">OpenRouter Privacy Policy</a></li>
@@ -71,7 +69,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </p>
                 <ul>
                     <li>A pseudonymous device identifier is used to associate events from the same device.</li>
-                    <li><strong>No file contents, email contents, or recipients are included</strong> in analytics events.</li>
+                    <li><strong>No file contents, text contents, or recipients are included</strong> in analytics events.</li>
                 </ul>
                 <p>To opt out: Go to Settings → General → Disable “Send usage metrics”.</p>
 

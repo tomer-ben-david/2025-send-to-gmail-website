@@ -23,8 +23,8 @@ const CONTACT_EMAIL = "info@quikey.app";
                 <div class="quick-action-header">
                     <p class="quick-action-eyebrow">macOS right-click actions</p>
                     <h2>Your macOS right-click menu, supercharged.</h2>
-                    <p class="quick-action-description">
-                        <strong>Send files to Gmail</strong>, upload to <strong>Google Drive</strong>, <strong>compress videos</strong>, convert to <strong>PDF</strong>, or run AI actions with <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Claude</strong> — from the menus you already use.
+    <p class="quick-action-description">
+                        <strong>Upload files to Google Drive</strong>, <strong>convert to PDF</strong>, <strong>compress videos</strong>, or run AI actions with <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Claude</strong> — from the menus you already use.
                     </p>
                 </div>
                 <div class="quick-action-body">
@@ -32,7 +32,7 @@ const CONTACT_EMAIL = "info@quikey.app";
                         <ol class="quick-action-steps">
                             <li>Select one or more files in Finder</li>
                             <li>Right-click and open the <strong>Quick Actions</strong> menu</li>
-                            <li>Choose an action: <strong>Send to Gmail</strong>, <strong>Upload to Drive</strong>, <strong>Analyze with AI</strong>, <strong>Convert to PDF</strong>, <strong>Compress Video</strong>, or <strong>Scheduled Backup</strong></li>
+                            <li>Choose an action: <strong>Upload to Drive</strong>, <strong>Analyze with AI</strong>, <strong>Convert to PDF</strong>, or <strong>Compress Video</strong></li>
                         </ol>
                         <p class="quick-action-note">Works anywhere Finder shows Quick Actions — Desktop, Downloads, AirDrop, and more. Select text in any app to run AI actions (analyze, translate, look up definitions, summarize, explain, grammar check) via the system Services menu.</p>
                         {EARLY_ACCESS_MODE ? (
@@ -91,7 +91,15 @@ const CONTACT_EMAIL = "info@quikey.app";
                         )}
                     </div>
                     <div class="quick-action-media">
-                        <img src="/assets/right-click-demo.gif" alt="Demo showing QuiKey Finder quick actions" loading="lazy">
+                        <video
+                            src="/assets/onboarding_claude_cli.mp4"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            preload="metadata"
+                            aria-label="Demo showing QuiKey Claude CLI onboarding"
+                        ></video>
                     </div>
                 </div>
             </div>
@@ -103,7 +111,7 @@ const CONTACT_EMAIL = "info@quikey.app";
         <div class="container">
             <h3>Built into the tools you already use</h3>
             <p class="where-subtitle">
-                QuiKey installs <strong>9 Finder actions</strong> and <strong>18 selected-text actions</strong> as native macOS Services. AI chats and squads are available inside the app.
+                QuiKey installs <strong>6 Finder actions</strong> and <strong>18 selected-text actions</strong> as native macOS Services. AI chats and squads are available inside the app.
             </p>
 
             <div class="where-grid">
@@ -118,12 +126,12 @@ const CONTACT_EMAIL = "info@quikey.app";
                         </div>
                     </div>
                     <ul class="where-list">
-                        <li><span class="where-item-title">Send to Gmail</span><span class="where-item-desc">Attachments via Gmail.</span></li>
                         <li><span class="where-item-title">Upload to Drive</span><span class="where-item-desc">Upload selected items to Google Drive.</span></li>
-                        <li><span class="where-item-title">Analyze with AI</span><span class="where-item-desc">Send files to ChatGPT, Gemini, or Claude.</span></li>
+                        <li><span class="where-item-title">Analyze with ChatGPT</span><span class="where-item-desc">Send files to ChatGPT for analysis.</span></li>
+                        <li><span class="where-item-title">Analyze with Gemini</span><span class="where-item-desc">Send files to Gemini for analysis.</span></li>
+                        <li><span class="where-item-title">Analyze with Claude</span><span class="where-item-desc">Send files to Claude for analysis.</span></li>
                         <li><span class="where-item-title">Convert to PDF</span><span class="where-item-desc">Convert selected items to PDF.</span></li>
                         <li><span class="where-item-title">Compress video</span><span class="where-item-desc">Reduce size of videos and GIFs.</span></li>
-                        <li><span class="where-item-title">Scheduled backups</span><span class="where-item-desc">Add/remove items from your backup list.</span></li>
                     </ul>
                 </div>
 
@@ -161,9 +169,9 @@ const CONTACT_EMAIL = "info@quikey.app";
                     <ul class="where-list">
                         <li><span class="where-item-title">AI Chats</span><span class="where-item-desc">Conversations with follow-ups, local history, and exports.</span></li>
                         <li><span class="where-item-title">AI Squads</span><span class="where-item-desc">Multi-step workflows across multiple providers.</span></li>
+                        <li><span class="where-item-title">OpenRouter models</span><span class="where-item-desc">Access a large catalog of models inside the app.</span></li>
                         <li><span class="where-item-title">Templates</span><span class="where-item-desc">Built-in prompts; Pro unlocks custom templates and branding removal.</span></li>
                         <li><span class="where-item-title">History & statistics</span><span class="where-item-desc">Reopen results, view usage, export reports/CSV.</span></li>
-                        <li><span class="where-item-title">Backups</span><span class="where-item-desc">Set schedule/time and Gmail labels for scheduled backups.</span></li>
                     </ul>
                 </div>
             </div>
@@ -185,22 +193,6 @@ const CONTACT_EMAIL = "info@quikey.app";
             </div>
 
             <div class="guides-grid">
-                <a href="https://www.youtube.com/watch?v=8O6iTRXJvYs" target="_blank" rel="noopener" class="guide-card">
-                    <div class="guide-thumbnail">
-                        <img src="https://i.ytimg.com/vi/8O6iTRXJvYs/hqdefault.jpg" alt="Send to Gmail demo" loading="lazy">
-                        <div class="guide-play-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="guide-content">
-                        <h4>Send to Gmail</h4>
-                        <p>Email files directly from Finder — just right-click and send</p>
-                        <span class="guide-tag">Getting Started</span>
-                    </div>
-                </a>
-
                 <a href="https://www.youtube.com/watch?v=dBPMFkl6Slg" target="_blank" rel="noopener" class="guide-card">
                     <div class="guide-thumbnail">
                         <img src="https://i.ytimg.com/vi/dBPMFkl6Slg/hqdefault.jpg" alt="AI Chats demo" loading="lazy">
@@ -258,19 +250,14 @@ const CONTACT_EMAIL = "info@quikey.app";
             <h3>What you can do</h3>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon"><Icon name="mail" class="icon" title="Send to Gmail" /></div>
-                    <h4>Send to Gmail</h4>
-                    <p>Email selected files as Gmail attachments from Finder. Supports drafts, recipients, subject/body templates, and labels.</p>
-                </div>
-                <div class="feature-card">
                     <div class="feature-icon"><Icon name="cloud" class="icon" title="Upload to Drive" /></div>
-                    <h4>Upload to Drive</h4>
-                    <p>Upload files to Google Drive from Finder, organized into a dedicated <strong>QuiKey</strong> folder.</p>
+                    <h4>Upload to Google Drive</h4>
+                    <p>Right-click in Finder to upload files to Drive. Files land in a dedicated <strong>QuiKey</strong> folder.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><Icon name="sparkles" class="icon" title="Analyze with AI" /></div>
                     <h4>Analyze files with AI</h4>
-                    <p>Right-click files in Finder to analyze with <strong>ChatGPT</strong>, <strong>Gemini</strong>, or <strong>Claude</strong> (API key or browser mode where supported).</p>
+                    <p>Right-click files in Finder to analyze with <strong>ChatGPT</strong>, <strong>Gemini</strong>, or <strong>Claude</strong>.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><Icon name="document" class="icon" title="Convert to PDF" /></div>
@@ -283,11 +270,6 @@ const CONTACT_EMAIL = "info@quikey.app";
                     <p>Reduce the size of large videos and animated GIFs for easier sharing.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><Icon name="archive" class="icon" title="Scheduled backups" /></div>
-                    <h4>Scheduled backups</h4>
-                    <p>Add files/folders to a scheduled Gmail backup list from Finder, then manage timing/labels in the app.</p>
-                </div>
-                <div class="feature-card">
                     <div class="feature-icon"><Icon name="text" class="icon" title="Text actions" /></div>
                     <h4>AI actions for selected text</h4>
                     <p>Select text in any app and run AI actions: analyze, translate, look up definitions, summarize, explain, and grammar check.</p>
@@ -295,12 +277,17 @@ const CONTACT_EMAIL = "info@quikey.app";
                 <div class="feature-card">
                     <div class="feature-icon"><Icon name="bubble" class="icon" title="AI Chats" /></div>
                     <h4>AI Chats</h4>
-                    <p>Use the app for ongoing conversations with files, follow-ups, and local history. Export conversations when needed.</p>
+                    <p>Chat with AI using your files — ask questions, follow up, and keep a local conversation history.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><Icon name="users" class="icon" title="AI Squads" /></div>
                     <h4>AI Squads</h4>
-                    <p>Run multi-step workflows where multiple AI providers collaborate, compare, and synthesize results into one output (with token/cost estimates).</p>
+                    <p>Run multi-step workflows where multiple AI providers collaborate, compare, and synthesize results into one output.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><Icon name="rocket" class="icon" title="OpenRouter models" /></div>
+                    <h4>OpenRouter models</h4>
+                    <p>Choose from a large catalog of models inside QuiKey for chats and squads.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><Icon name="template" class="icon" title="Templates" /></div>
@@ -310,7 +297,7 @@ const CONTACT_EMAIL = "info@quikey.app";
                 <div class="feature-card">
                     <div class="feature-icon"><Icon name="chart" class="icon" title="History & statistics" /></div>
                     <h4>History & statistics</h4>
-                    <p>Track what you ran, reopen results, and view usage statistics inside the app.</p>
+                    <p>Track what you ran, reopen results, filter by provider, and view usage statistics inside the app.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><Icon name="lock" class="icon" title="Secure" /></div>
@@ -384,7 +371,7 @@ const CONTACT_EMAIL = "info@quikey.app";
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h4>Choose Action</h4>
-                        <p>Gmail, Drive, AI analysis, PDF conversion, compression, backups, or text actions</p>
+                        <p>Drive, AI analysis, PDF conversion, compression, or text actions</p>
                     </div>
                 </div>
                 <div class="step">
@@ -432,14 +419,12 @@ const CONTACT_EMAIL = "info@quikey.app";
                                     <label for="use-case">How will you use QuiKey? (optional)</label>
                                     <select id="use-case" name="use_case">
                                         <option value="">Select your primary use case</option>
-                                        <option value="gmail">Send files to Gmail</option>
                                         <option value="drive">Upload to Google Drive</option>
                                         <option value="ai-squad">AI Squad Consultation</option>
                                         <option value="chat">Chat with AI</option>
                                         <option value="text">Text AI tools (translate, summarize, etc.)</option>
                                         <option value="pdf">PDF conversion</option>
                                         <option value="video">Video compression</option>
-                                        <option value="backup">Daily backups</option>
                                         <option value="all">All of the above</option>
                                     </select>
                                 </div>
@@ -468,7 +453,7 @@ const CONTACT_EMAIL = "info@quikey.app";
                                 <h5>System Requirements</h5>
                                 <ul>
                                     <li>macOS 13.0 or later</li>
-                                    <li>Google account for Gmail access</li>
+                                    <li>Google account for Drive access</li>
                                     <li>Internet connection</li>
                                 </ul>
                             </div>
@@ -496,7 +481,7 @@ const CONTACT_EMAIL = "info@quikey.app";
                                 <h5>System Requirements</h5>
                                 <ul>
                                     <li>macOS 13.0 or later</li>
-                                    <li>Google account for Gmail access</li>
+                                    <li>Google account for Drive access</li>
                                     <li>Internet connection</li>
                                 </ul>
                             </div>
@@ -547,8 +532,16 @@ const CONTACT_EMAIL = "info@quikey.app";
                     <p>File actions appear in Finder’s right-click menu (Quick Actions/Services). Text actions appear when you select text in any app and use the system Services menu.</p>
                 </div>
                 <div class="faq-item">
+                    <h4>Why don’t I see the actions in right-click?</h4>
+                    <p>macOS requires enabling Services manually. QuiKey links you there, or go to System Settings → Keyboard → Keyboard Shortcuts → Services and enable the QuiKey actions you want.</p>
+                </div>
+                <div class="faq-item">
                     <h4>What file types are supported?</h4>
-                    <p>For Gmail/Drive, you can send any file type. PDF conversion and AI analysis depend on the action and provider, and QuiKey will guide you if a file is unsupported.</p>
+                    <p>For Drive, you can send any file type. PDF conversion and AI analysis depend on the action and provider, and QuiKey will guide you if a file is unsupported.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What AI modes are supported?</h4>
+                    <p>QuiKey supports API keys, browser mode (where supported), and Claude CLI subscription mode. Choose per provider in Settings → AI Providers.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Is there a cost?</h4>
@@ -698,7 +691,8 @@ const CONTACT_EMAIL = "info@quikey.app";
     min-width: 280px;
 }
 
-.quick-action-media img {
+.quick-action-media img,
+.quick-action-media video {
     width: 100%;
     max-width: 420px;
     border-radius: 18px;
@@ -1398,7 +1392,8 @@ const CONTACT_EMAIL = "info@quikey.app";
         flex-direction: column;
     }
 
-    .quick-action-media img {
+    .quick-action-media img,
+    .quick-action-media video {
         max-width: 100%;
     }
 }

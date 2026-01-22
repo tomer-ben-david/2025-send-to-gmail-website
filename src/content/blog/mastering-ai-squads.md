@@ -38,7 +38,7 @@ When you run models in parallel—like a "Decision Council" to weigh the pros an
 If Claude 3.5 thinks a strategy is low-risk but GPT-4o flags it as high-risk, QuiKey will explicitly highlight this disagreement. We call this "Semantic Triggers." Instead of hiding the differences, we surface them so you can make an informed decision.
 
 ### 4. The Artifacts Viewer
-Squads often produce multiple files or complex documents. Instead of hunting through chat history, use the **Artifacts Viewer**. It’s a dedicated drawer that collects every draft, research note, and final output created during the session. One-click and it's in your Finder or your Gmail.
+Squads often produce multiple files or complex documents. Instead of hunting through chat history, use the **Artifacts Viewer**. It’s a dedicated drawer that collects every draft, research note, and final output created during the session. One-click and it's in your Finder or your Drive.
 
 ### 5. Essential Squad Templates
 To get you started, we’ve included several proven workflow templates:
