@@ -1,0 +1,635 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+interface FeatureItem {
+  icon: "folder" | "text" | "app" | "mail" | "cloud" | "sparkles" | "document" | "compress" | "archive" | "bubble" | "users" | "template" | "chart" | "lock" | "check" | "dash" | "rocket";
+  title: string;
+  description: string;
+}
+
+interface WhereItem {
+  title: string;
+  description: string;
+}
+
+interface WhereCard {
+  icon: "folder" | "text" | "app" | "mail" | "cloud" | "sparkles" | "document" | "compress" | "archive" | "bubble" | "users" | "template" | "chart" | "lock" | "check" | "dash" | "rocket";
+  title: string;
+  subtitle: string;
+  items: WhereItem[];
+  footnote?: string;
+}
+
+interface StepItem {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  appName: string;
+  pageTitle: string;
+  metaDescription: string;
+  pagePath: string;
+  heroDescription: string;
+  heroNote: string;
+  heroTagline: string;
+  sectionIntro: string;
+  features: FeatureItem[];
+  whereCards: WhereCard[];
+  steps: StepItem[];
+  downloadUrl: string;
+  version: string;
+  requirements: string[];
+  nextSteps: string[];
+  useCases: string[];
+}
+
+const {
+  appName,
+  pageTitle,
+  metaDescription,
+  pagePath,
+  heroDescription,
+  heroNote,
+  heroTagline,
+  sectionIntro,
+  features,
+  whereCards,
+  steps,
+  downloadUrl,
+  version,
+  requirements,
+  nextSteps,
+  useCases,
+} = Astro.props;
+
+const EARLY_ACCESS_MODE = true;
+const WEB3FORMS_ACCESS_KEY = "b0b429e8-e074-4d99-814b-b944ca083ccb";
+const CONTACT_EMAIL = "info@quikey.app";
+
+const navLinks: NavLink[] = [
+  { href: '#features', label: 'Features' },
+  { href: '#where', label: 'Where' },
+  { href: '#download', label: 'Download' },
+  { href: '#how-it-works', label: 'How it Works' },
+  { href: '/blog', label: 'Blog' },
+];
+
+const footerLinks: NavLink[] = [
+  { href: '#features', label: 'Features' },
+  { href: '#download', label: 'Download' },
+  { href: '#how-it-works', label: 'How it Works' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/privacy', label: 'Privacy' },
+  { href: '/terms', label: 'Terms' },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={metaDescription}
+  productName={appName}
+  navLinks={navLinks}
+  footerName={appName}
+  footerDescription={sectionIntro}
+  footerLinks={footerLinks}
+>
+  <section class="quick-action">
+    <div class="container">
+      <div class="quick-action-card">
+        <div class="quick-action-header">
+          <p class="quick-action-eyebrow">macOS quick actions</p>
+          <h2>{appName}, focused on one job.</h2>
+          <p class="quick-action-description" set:html={heroDescription} />
+        </div>
+
+        <div class="quick-action-body">
+          <div class="quick-action-details">
+            <p class="quick-action-note">{heroNote}</p>
+            <div class="quick-action-actions">
+              <a href="#download" class="btn btn-primary">{EARLY_ACCESS_MODE ? 'Join the waitlist' : 'Download for macOS'}</a>
+              <a href="#how-it-works" class="btn btn-secondary">How it works</a>
+            </div>
+            <div class="quick-action-badges">
+              <span class="badge">macOS 13.0+</span>
+              <span class="badge">Focused workflow</span>
+              <span class="badge">{appName}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="where" class="where">
+    <div class="container">
+      <h3>Where it works</h3>
+      <p class="where-subtitle">{sectionIntro}</p>
+
+      <div class="where-grid">
+        {whereCards.map((card) => (
+          <div class="where-card">
+            <div class="where-card-header">
+              <div class="where-icon-badge">
+                <Icon name={card.icon} class="icon" title={card.title} />
+              </div>
+              <div>
+                <h4>{card.title}</h4>
+                <p>{card.subtitle}</p>
+              </div>
+            </div>
+            <ul class="where-list">
+              {card.items.map((item) => (
+                <li>
+                  <span class="where-item-title">{item.title}</span>
+                  <span class="where-item-desc">{item.description}</span>
+                </li>
+              ))}
+            </ul>
+            {card.footnote && <p class="where-footnote">{card.footnote}</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h3>What you can do</h3>
+      <div class="features-grid">
+        {features.map((feature) => (
+          <div class="feature-card">
+            <div class="feature-icon"><Icon name={feature.icon} class="icon" title={feature.title} /></div>
+            <h4>{feature.title}</h4>
+            <p>{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h3>How it works</h3>
+      <div class="steps">
+        {steps.map((step, index) => (
+          <div class="step">
+            <div class="step-number">{index + 1}</div>
+            <div class="step-content">
+              <h4>{step.title}</h4>
+              <p>{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="download">
+    <div class="container">
+      {EARLY_ACCESS_MODE ? (
+        <>
+          <h3>Get early access</h3>
+          <div class="download-grid">
+            <div class="download-card form-card">
+              <h4>Join the {appName} waitlist</h4>
+              <p class="download-copy">{heroTagline}</p>
+
+              <form class="early-access-form-full" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+                <input type="hidden" name="subject" value={`New ${appName} Early Access Request!`} />
+                <input type="hidden" name="from_name" value={`${appName} Early Access`} />
+                <input type="hidden" name="redirect" value={`https://quikey.app${pagePath}?success=true`} />
+
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="use-case">Primary use case</label>
+                  <select id="use-case" name="use_case">
+                    <option value="">Select one</option>
+                    {useCases.map((useCase) => <option value={useCase}>{useCase}</option>)}
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Request early access</button>
+              </form>
+
+              <p class="contact-note">Questions? Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+            </div>
+
+            <div class="download-card info-card">
+              <h4>{appName}</h4>
+              <p class="version">Current build target: {version}</p>
+
+              <div class="system-requirements">
+                <h5>System requirements</h5>
+                <ul>
+                  {requirements.map((requirement) => <li>{requirement}</li>)}
+                </ul>
+              </div>
+
+              <div class="launch-info">
+                <h5>What happens next?</h5>
+                <ol>
+                  {nextSteps.map((step) => <li>{step}</li>)}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div class="download-grid single-download-grid">
+          <div class="download-card info-card">
+            <h4>{appName}</h4>
+            <p class="version">Version {version}</p>
+            <a href={downloadUrl} class="btn btn-primary">Download DMG</a>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.quick-action {
+  background: radial-gradient(1200px circle at 20% 0%, rgba(99, 102, 241, 0.12), transparent 50%),
+    radial-gradient(900px circle at 80% 10%, rgba(59, 130, 246, 0.12), transparent 45%),
+    #f8fafc;
+  padding: 8rem 0 4rem;
+}
+
+.quick-action-card,
+.where-card,
+.feature-card,
+.download-card,
+.step {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.quick-action-card {
+  padding: 3rem;
+}
+
+.quick-action-header h2,
+.where h3,
+.features h3,
+.how-it-works h3,
+.download h3 {
+  color: #0f172a;
+}
+
+.quick-action-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 0.75rem;
+}
+
+.quick-action-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.quick-action-description {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.quick-action-body {
+  margin-top: 1.5rem;
+}
+
+.quick-action-note,
+.where-subtitle,
+.download-copy,
+.feature-card p,
+.step-content p,
+.contact-note {
+  color: #4b5563;
+}
+
+.quick-action-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.35rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.22);
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.btn-large {
+  width: 100%;
+}
+
+.quick-action-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.where,
+.features,
+.how-it-works,
+.download {
+  padding: 5rem 0;
+}
+
+.where {
+  background: #ffffff;
+}
+
+.features,
+.download {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.where h3,
+.features h3,
+.how-it-works h3,
+.download h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.where-subtitle {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.where-grid,
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.where-card,
+.feature-card,
+.download-card {
+  padding: 1.75rem;
+}
+
+.where-card-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.where-icon-badge,
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(99, 102, 241, 0.18);
+}
+
+:global(.icon) {
+  width: 22px;
+  height: 22px;
+}
+
+.where-card h4,
+.feature-card h4,
+.step-content h4,
+.download-card h4 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.where-card-header p {
+  color: #6b7280;
+  margin: 0;
+}
+
+.where-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.where-list li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+}
+
+.where-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+.where-item-title {
+  font-weight: 700;
+  color: #111827;
+}
+
+.where-item-desc {
+  color: #4b5563;
+}
+
+.where-item-desc::before {
+  content: ' — ';
+  color: #94a3b8;
+}
+
+.where-footnote {
+  margin-top: 1rem;
+  color: #6b7280;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.step {
+  padding: 1.75rem;
+}
+
+.step-number {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.form-card,
+.info-card {
+  min-height: 100%;
+}
+
+.version {
+  color: #6366f1;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #111827;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  font: inherit;
+  background: #ffffff;
+}
+
+.system-requirements,
+.launch-info {
+  margin-top: 1.5rem;
+}
+
+.system-requirements h5,
+.launch-info h5 {
+  font-size: 1rem;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.system-requirements ul,
+.launch-info ol {
+  padding-left: 1.25rem;
+  color: #4b5563;
+}
+
+.system-requirements li,
+.launch-info li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-note {
+  margin-top: 1rem;
+}
+
+.contact-note a {
+  color: #4f46e5;
+}
+
+@media (max-width: 768px) {
+  .quick-action {
+    padding-top: 6.5rem;
+  }
+
+  .quick-action-card,
+  .where-card,
+  .feature-card,
+  .download-card,
+  .step {
+    border-radius: 18px;
+  }
+
+  .quick-action-card {
+    padding: 1.5rem;
+  }
+
+  .quick-action-header h2,
+  .where h3,
+  .features h3,
+  .how-it-works h3,
+  .download h3 {
+    font-size: 2rem;
+  }
+}
+</style>

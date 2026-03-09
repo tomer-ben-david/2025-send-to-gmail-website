@@ -6,6 +6,11 @@ interface Props {
   ogImage?: string;
   publishedTime?: string;
   author?: string;
+    productName?: string;
+    navLinks?: Array<{ href: string; label: string }>;
+    footerName?: string;
+    footerDescription?: string;
+    footerLinks?: Array<{ href: string; label: string }>;
 }
 
 const {
@@ -14,10 +19,34 @@ const {
   ogType = "website",
   ogImage = "/og-image.png",
   publishedTime,
-  author
+    author,
+    productName = "QuiKey",
+    navLinks,
+    footerName = productName,
+    footerDescription = "Right-click actions for files and selected text. Configure once, then use it everywhere.",
+    footerLinks,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const defaultNavLinks = [
+    { href: "/#features", label: "Features" },
+    { href: "/#where", label: "Where" },
+    { href: "/#guides", label: "Guides" },
+    { href: "/#pricing", label: "Pricing" },
+    { href: "/#download", label: "Download" },
+    { href: "/#how-it-works", label: "How it Works" },
+    { href: "/blog", label: "Blog" },
+];
+const defaultFooterLinks = [
+    { href: "/#features", label: "Features" },
+    { href: "/#download", label: "Download" },
+    { href: "/#how-it-works", label: "How it Works" },
+    { href: "/blog", label: "Blog" },
+    { href: "/privacy", label: "Privacy" },
+    { href: "/terms", label: "Terms" },
+];
+const resolvedNavLinks = navLinks ?? defaultNavLinks;
+const resolvedFooterLinks = footerLinks ?? defaultFooterLinks;
 ---
 
 <!DOCTYPE html>
@@ -57,11 +86,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "QuiKey",
+            "name": productName,
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "macOS",
-      "description": "Adds Finder + selected-text right-click actions for Drive/PDF/compression and AI workflows (ChatGPT, Gemini, Claude, OpenRouter).",
-      "url": "https://quikey.app",
+            "description": description,
+            "url": canonicalURL,
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -87,13 +116,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                     <a href="/"><h1>QuiKey</h1></a>
                 </div>
                 <nav class="nav-links">
-                    <a href="/#features">Features</a>
-                    <a href="/#where">Where</a>
-                    <a href="/#guides">Guides</a>
-                    <a href="/#pricing">Pricing</a>
-                    <a href="/#download">Download</a>
-                    <a href="/#how-it-works">How it Works</a>
-                    <a href="/blog">Blog</a>
+                    {resolvedNavLinks.map((link) => <a href={link.href}>{link.label}</a>)}
                 </nav>
             </div>
         </div>
@@ -107,16 +130,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <h4>QuiKey</h4>
-                    <p>Right-click actions for files and selected text. Configure once, then use it everywhere.</p>
+                    <h4>{footerName}</h4>
+                    <p>{footerDescription}</p>
                 </div>
                 <div class="footer-links">
-                    <a href="/#features">Features</a>
-                    <a href="/#download">Download</a>
-                    <a href="/#how-it-works">How it Works</a>
-                    <a href="/blog">Blog</a>
-                    <a href="/privacy">Privacy</a>
-                    <a href="/terms">Terms</a>
+                    {resolvedFooterLinks.map((link) => <a href={link.href}>{link.label}</a>)}
                 </div>
             </div>
             <div class="footer-bottom">
@@ -133,8 +151,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 link.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
                     const targetId = href?.startsWith('/#') ? href.substring(1) : href;
+                    const isSamePageHash = href?.startsWith('#');
+                    const isRootPageHash = href?.startsWith('/#') && window.location.pathname === '/';
 
-                    if (targetId && window.location.pathname === '/') {
+                    if (targetId && (isSamePageHash || isRootPageHash)) {
                         e.preventDefault();
                         const targetElement = document.querySelector(targetId);
 
