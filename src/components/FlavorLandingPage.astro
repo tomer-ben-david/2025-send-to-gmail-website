@@ -69,7 +69,6 @@ const {
   useCases,
 } = Astro.props;
 
-const EARLY_ACCESS_MODE = true;
 const WEB3FORMS_ACCESS_KEY = "b0b429e8-e074-4d99-814b-b944ca083ccb";
 const CONTACT_EMAIL = "info@quikey.app";
 
@@ -193,73 +192,13 @@ const footerLinks: NavLink[] = [
 
   <section id="download" class="download">
     <div class="container">
-      {EARLY_ACCESS_MODE ? (
-        <>
-          <h3>Get early access</h3>
-          <div class="download-grid">
-            <div class="download-card form-card">
-              <h4>Join the {appName} waitlist</h4>
-              <p class="download-copy">{heroTagline}</p>
-
-              <form class="early-access-form-full" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
-                <input type="hidden" name="subject" value={`New ${appName} Early Access Request!`} />
-                <input type="hidden" name="from_name" value={`${appName} Early Access`} />
-                <input type="hidden" name="redirect" value={`https://quikey.app${pagePath}?success=true`} />
-
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" placeholder="Your name" required />
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="your@email.com" required />
-                </div>
-
-                <div class="form-group">
-                  <label for="use-case">Primary use case</label>
-                  <select id="use-case" name="use_case">
-                    <option value="">Select one</option>
-                    {useCases.map((useCase) => <option value={useCase}>{useCase}</option>)}
-                  </select>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-large">Request early access</button>
-              </form>
-
-              <p class="contact-note">Questions? Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
-            </div>
-
-            <div class="download-card info-card">
-              <h4>{appName}</h4>
-              <p class="version">Current build target: {version}</p>
-
-              <div class="system-requirements">
-                <h5>System requirements</h5>
-                <ul>
-                  {requirements.map((requirement) => <li>{requirement}</li>)}
-                </ul>
-              </div>
-
-              <div class="launch-info">
-                <h5>What happens next?</h5>
-                <ol>
-                  {nextSteps.map((step) => <li>{step}</li>)}
-                </ol>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <div class="download-grid single-download-grid">
-          <div class="download-card info-card">
-            <h4>{appName}</h4>
-            <p class="version">Version {version}</p>
-            <a href={downloadUrl} class="btn btn-primary">Download DMG</a>
-          </div>
+      <div class="download-grid single-download-grid">
+        <div class="download-card info-card">
+          <h4>{appName}</h4>
+          <p class="version">Version {version}</p>
+          <a href={downloadUrl} class="btn btn-primary">Download DMG</a>
         </div>
-      )}
+      </div>
     </div>
   </section>
 </BaseLayout>
