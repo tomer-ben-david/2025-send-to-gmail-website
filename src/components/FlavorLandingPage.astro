@@ -36,6 +36,7 @@ interface Props {
   pageTitle: string;
   metaDescription: string;
   pagePath: string;
+  heroTitle: string;
   heroDescription: string;
   heroNote: string;
   heroTagline: string;
@@ -55,6 +56,7 @@ const {
   pageTitle,
   metaDescription,
   pagePath,
+  heroTitle,
   heroDescription,
   heroNote,
   heroTagline,
@@ -104,7 +106,7 @@ const footerLinks: NavLink[] = [
       <div class="quick-action-card">
         <div class="quick-action-header">
           <p class="quick-action-eyebrow">macOS quick actions</p>
-          <h2>{appName}, focused on one job.</h2>
+          <h2>{heroTitle}</h2>
           <p class="quick-action-description" set:html={heroDescription} />
         </div>
 
