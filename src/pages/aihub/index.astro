@@ -1,7 +1,11 @@
 ---
 import FlavorLandingPage from '../../components/FlavorLandingPage.astro';
+import {
+  currentReleaseVersion,
+  dmgDownloadUrl,
+} from '../../data/currentRelease';
 
-const version = 'v2026.02.10';
+const version = currentReleaseVersion('AIHub');
 ---
 
 <FlavorLandingPage
@@ -13,7 +17,7 @@ const version = 'v2026.02.10';
   heroNote="AI Hub keeps the AI-specific capabilities from the larger QuiKey app: Finder analysis actions, selected-text tools, AI chats, and squads. It does not include Gmail, Drive, or conversion-focused workflows."
   heroTagline="Join the waitlist for the AI-focused macOS workflow flavor."
   sectionIntro="AI Hub installs AI actions in Finder and the macOS Services menu, and unlocks chats and squads inside the app."
-  downloadUrl={`https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/${version}/AIHub_${version}_arm64.dmg`}
+  downloadUrl={dmgDownloadUrl('AIHub')}
   version={version}
   requirements={[
     'macOS 13.0 or later',

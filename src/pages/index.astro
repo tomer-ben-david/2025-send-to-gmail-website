@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
+import {
+  currentReleaseVersion,
+  dmgDownloadUrl,
+} from '../data/currentRelease';
+
+const quikeyDmgUrl = dmgDownloadUrl('QuiKey');
+const quikeyVersion = currentReleaseVersion('QuiKey');
 
 // ============================================
 // EARLY ACCESS MODE TOGGLE
@@ -76,12 +83,12 @@ const CONTACT_EMAIL = "info@quikey.app";
                         ) : (
                             <>
                                 <div class="quick-action-actions">
-                                    <a id="download-btn" href="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.01/QuiKey_v2025.12.01_arm64.dmg" class="btn btn-primary">Download for macOS</a>
+                                    <a id="download-btn" href={quikeyDmgUrl} class="btn btn-primary">Download for macOS</a>
                                     <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
                                 </div>
                                 <p class="quick-action-meta">
-                                    <span class="download-version">Version v2025.12.01</span>
-                                    <span class="download-size">· 1.3 MB</span>
+                                    <span class="download-version">Version {quikeyVersion}</span>
+                                    <span class="download-size">· Apple silicon</span>
                                 </p>
                                 <div class="quick-action-badges">
                                     <span class="badge">macOS 13.0+</span>
@@ -492,14 +499,14 @@ const CONTACT_EMAIL = "info@quikey.app";
     <Icon name="mail" class="icon-download" />
 </div>
                                 <h4>QuiKey</h4>
-                                <p class="version">Version v2025.12.01</p>
+                                <p class="version">Version {quikeyVersion}</p>
                                 <div class="download-buttons">
-                                    <a href="https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2025.12.01/QuiKey_v2025.12.01_arm64.dmg" class="btn btn-download" id="download-btn-2">
+                                    <a href={quikeyDmgUrl} class="btn btn-download" id="download-btn-2">
                                         <span class="download-icon">⬇️</span>
                                         Download DMG
                                     </a>
                                 </div>
-                                <p class="download-size">~1.3 MB</p>
+                                <p class="download-size">Apple silicon (arm64)</p>
                             </div>
                         </div>
                     </div>

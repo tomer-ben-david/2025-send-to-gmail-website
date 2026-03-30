@@ -1,7 +1,7 @@
 {
-  "version": "v2026.02.10",
-  "downloadURL": "https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2026.02.10/AIHub_v2026.02.10_arm64.dmg",
-  "checksum": "sha256:785f90868145759845d18b0ba978f1f1b7512213f8e1558dc9d8d98c8fa854f6",
-  "releaseNotes": "## What's New in Version v2026.02.10\n\n- Bug fixes and improvements\n- Enhanced stability and performance",
+  "version": "v2026.03.30",
+  "downloadURL": "https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/v2026.03.30/AIHub_v2026.03.30_arm64.dmg",
+  "checksum": "sha256:9fe52354e9034bc82b04b2202eb443168c224d31c265a4a8812daa2a9f356e3b",
+  "releaseNotes": "Release v2026.03.30",
   "critical": false
 }

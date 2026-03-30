@@ -1,7 +1,11 @@
 ---
 import FlavorLandingPage from '../../components/FlavorLandingPage.astro';
+import {
+  currentReleaseVersion,
+  dmgDownloadUrl,
+} from '../../data/currentRelease';
 
-const version = 'v2026.02.10';
+const version = currentReleaseVersion('SendToGmailDrive');
 ---
 
 <FlavorLandingPage
@@ -13,7 +17,7 @@ const version = 'v2026.02.10';
   heroNote="Works anywhere Finder shows Quick Actions, including Desktop, Downloads, AirDrop, and normal Finder folders. This flavor is focused on Google workflows and does not include the broader QuiKey AI or conversion toolset."
   heroTagline="Join the early access list for the Gmail and Drive-focused macOS workflow."
   sectionIntro="Send to Gmail/Drive installs two Finder actions and keeps Google-focused history and settings inside the app."
-  downloadUrl={`https://github.com/tomer-ben-david/2025-send-to-gmail-website/releases/download/${version}/SendToGmailDrive_${version}_arm64.dmg`}
+  downloadUrl={dmgDownloadUrl('SendToGmailDrive')}
   version={version}
   requirements={[
     'macOS 13.0 or later',
