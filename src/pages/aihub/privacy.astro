@@ -25,92 +25,152 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class="last-updated">Last updated: April 2026</p>
 
         <p>
-          <strong>QuiKey AI Hub</strong> (the “App”) is the AI-focused flavor of the QuiKey family for macOS. This policy
-          describes how the App handles data. It is written to align with the Mac App Store
-          <a href="/aihub/app-privacy-labels">privacy nutrition label</a> and App Store Connect disclosures.
+          This Privacy Policy describes how <strong>QuiKey AI Hub</strong> (“AI Hub”, “the App”, “we”, “us”) handles
+          information when you use the macOS app. It is written to align with the Mac App Store
+          <a href="/aihub/app-privacy-labels">privacy nutrition label</a> and App Store Connect disclosures. Structure
+          follows patterns used in our other App Store–reviewed products (clear categories, plain language, and a
+          concise data table).
         </p>
 
-        <section class="data-handling">
-          <h2>1. What the App does</h2>
-          <p>
-            The App helps you run AI actions on files and selected text (Finder and Services), and use AI chats and squads
-            inside the app. Processing uses <strong>third-party AI and tooling services that you configure</strong>
-            (for example OpenAI, Anthropic, Google Gemini, OpenRouter, or browser-based flows where applicable).
-          </p>
-          <p>
-            This flavor <strong>does not include Gmail or Google Drive upload features</strong>. If you use another QuiKey
-            flavor that does, that flavor’s privacy description applies there.
-          </p>
+        <h2>What AI Hub does</h2>
+        <p>
+          AI Hub runs on your Mac. It helps you run AI actions on files and selected text (Finder and Services), and use
+          AI chats and squads inside the app. This flavor <strong>does not include Gmail or Google Drive upload</strong>
+          features—other QuiKey flavors have their own privacy descriptions.
+        </p>
 
-          <h2>2. Data you actively send to third parties</h2>
-          <p>
-            When you invoke a feature, the App may send <strong>only what is needed for that request</strong> to the
-            provider you chose—for example file contents or selected text, plus prompts and model parameters you control.
-            Those transfers are governed by <strong>that provider’s terms and privacy policy</strong>, not by a separate
-            QuiKey-hosted “AI backend.”
-          </p>
-          <ul>
-            <li><a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI</a></li>
-            <li><a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a></li>
-            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google (Gemini)</a></li>
-            <li><a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">OpenRouter</a></li>
-          </ul>
+        <h2>Information involved</h2>
+        <p>The App may involve the following types of information:</p>
+        <ul>
+          <li>
+            <strong>Content you send to AI providers:</strong> files, selected text, prompts, and related context when
+            <em>you</em> start an action. That content goes to the third-party provider you configured, not to a QuiKey
+            “AI backend.”
+          </li>
+          <li>
+            <strong>Data stored locally:</strong> settings, API keys or credentials you enter, conversation history, and
+            diagnostic logs (on device), as the App needs to function.
+          </li>
+          <li>
+            <strong>Optional analytics:</strong> if you turn on usage metrics, pseudonymous events (for example a device
+            identifier and feature usage). Not your file bodies or chat text.
+          </li>
+          <li>
+            <strong>Purchases and licensing:</strong> metadata from Apple and/or commerce providers (for example Lemon
+            Squeezy) when you buy or restore a license.
+          </li>
+          <li>
+            <strong>Support:</strong> if you email us, we receive what you send (message content, attachments you
+            choose).
+          </li>
+        </ul>
 
-          <h2>3. Local storage on your Mac</h2>
-          <ul>
-            <li>
-              <strong>Credentials and settings:</strong> API keys, provider preferences, and related configuration are stored
-              locally on your device (for example in the app’s container / Application Support area). They are not sent to
-              QuiKey servers for storage.
-            </li>
-            <li>
-              <strong>History and chats:</strong> Conversation history and similar data are kept locally as part of the app’s
-              functionality unless you delete them in the App.
-            </li>
-            <li>
-              <strong>Logs:</strong> Diagnostic logs may be stored locally and can be removed by you where the App provides
-              controls.
-            </li>
-          </ul>
+        <h2>Data categories, collection, use, and recipients</h2>
+        <div class="table-wrap">
+          <table class="privacy-table">
+            <thead>
+              <tr>
+                <th>Data category</th>
+                <th>How it arises</th>
+                <th>How it is used</th>
+                <th>Who may receive it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Files, selected text, prompts, and request context</td>
+                <td>You run a Finder, Services, or in-app AI action</td>
+                <td>To perform the AI or automation step you requested</td>
+                <td>
+                  The third-party AI or tooling provider you configured (for example OpenAI, Anthropic, Google Gemini,
+                  OpenRouter). Governed by that provider’s terms and privacy policy.
+                </td>
+              </tr>
+              <tr>
+                <td>App settings, credentials, chat history, local logs</td>
+                <td>Stored by the App on your Mac as you use it</td>
+                <td>App functionality, session continuity, troubleshooting on your device</td>
+                <td>Stays on your Mac unless you use separate backup/sync outside the App</td>
+              </tr>
+              <tr>
+                <td>Pseudonymous usage and diagnostic signals</td>
+                <td>Only if you enable “Send usage metrics” in Settings</td>
+                <td>Improve stability and understand feature usage</td>
+                <td>Our configured analytics provider (see <a href="/aihub/app-privacy-labels">App Privacy labels</a>)</td>
+              </tr>
+              <tr>
+                <td>Purchase and entitlement metadata</td>
+                <td>When you purchase, restore, or validate a license</td>
+                <td>Provide paid features and verify entitlements</td>
+                <td>Apple and/or commerce providers (for example Lemon Squeezy) per their flows</td>
+              </tr>
+              <tr>
+                <td>Support messages</td>
+                <td>When you contact support</td>
+                <td>Respond to your request</td>
+                <td>Our support mailbox and processors we use to operate email</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          <h2>4. Optional analytics (opt-in)</h2>
-          <p>
-            If you enable usage metrics in Settings, the App may send <strong>pseudonymous analytics</strong> (for example a
-            device identifier, feature usage, and success or failure signals) to help improve stability and product
-            quality. <strong>Analytics does not include your file contents, selected text contents, or chat message
-            bodies.</strong>
-          </p>
-          <p>
-            To opt out: <strong>Settings → General → disable “Send usage metrics.”</strong> When disabled, the analytics SDK
-            is not initialized for that launch configuration.
-          </p>
-          <p>
-            Analytics is processed using a third-party analytics provider configured in the App (see
-            <a href="/aihub/app-privacy-labels">App Privacy labels</a> for the App Store–style breakdown).
-          </p>
+        <h2>Third-party AI and services</h2>
+        <p>
+          Providers you enable handle content under their own policies. Links for convenience:
+          <a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI</a>,
+          <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>,
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a>,
+          <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">OpenRouter</a>.
+        </p>
 
-          <h2>5. Payments and licensing</h2>
-          <p>
-            Purchases or license management may be handled through third-party commerce providers (for example Lemon
-            Squeezy). Payment and account data for those flows are subject to the provider’s policies.
-          </p>
+        <h2>Optional analytics</h2>
+        <p>
+          The App does not require analytics to function. If you enable usage metrics, you can disable them in
+          <strong>Settings → General → “Send usage metrics.”</strong> When disabled, the analytics SDK is not initialized
+          for that configuration.
+        </p>
 
-          <h2>6. No QuiKey server copy of your AI content</h2>
-          <p>
-            QuiKey does not operate a service that stores your files, prompts, or AI responses on our servers as part of the
-            App’s core operation. Network connections are made from your Mac to the providers you configure, and to
-            optional services such as analytics or licensing, as described above.
-          </p>
+        <h2>No sale of personal information; advertising</h2>
+        <p>
+          We do not sell your personal information. The App does not use IDFA-style cross-app advertising trackers.
+          Optional product analytics (when enabled) is for operating and improving the App, not for third-party ads.
+        </p>
 
-          <h2>7. Contact</h2>
-          <p>
-            Questions: <a href="mailto:support@quikey.app">support@quikey.app</a>
-          </p>
-          <p>
-            Related: <a href="/aihub/app-privacy-labels">App Privacy (nutrition labels)</a> ·
-            <a href="/terms">Terms of Service</a> · <a href="/privacy">General QuiKey privacy policy</a>
-          </p>
-        </section>
+        <h2>No QuiKey server copy of your AI content</h2>
+        <p>
+          QuiKey does not operate a service that stores your files, prompts, or AI responses on our servers as part of
+          the App’s core operation. Network connections are made from your Mac to providers you configure, and to optional
+          services such as analytics (if on) or licensing, as described above.
+        </p>
+
+        <h2>Your choices</h2>
+        <ul>
+          <li>Manage API keys and providers in Settings; revoke access at the provider when you want.</li>
+          <li>Clear history, logs, or reset options where the App provides controls.</li>
+          <li>Turn off usage metrics as described above.</li>
+          <li>Manage subscriptions in Apple’s account settings when applicable.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>AI Hub is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
+
+        <h2>International processing</h2>
+        <p>
+          When you use third-party AI or cloud services, your data may be processed in countries where those providers
+          operate. Their terms apply to that processing.
+        </p>
+
+        <h2>Updates</h2>
+        <p>We may update this policy. The “Last updated” date at the top will change when we do.</p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions: <a href="mailto:support@quikey.app">support@quikey.app</a>
+        </p>
+        <p>
+          Related: <a href="/aihub/app-privacy-labels">App Privacy (nutrition labels)</a> ·
+          <a href="/terms">Terms of Service</a> · <a href="/privacy">General QuiKey privacy policy</a>
+        </p>
       </div>
     </div>
   </section>
@@ -178,6 +238,37 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   .privacy-content strong {
     color: #1f2937;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .privacy-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    color: #4b5563;
+  }
+
+  .privacy-table th,
+  .privacy-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .privacy-table th {
+    background: #f9fafb;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .privacy-table a {
+    word-break: break-word;
   }
 
   @media (max-width: 768px) {
