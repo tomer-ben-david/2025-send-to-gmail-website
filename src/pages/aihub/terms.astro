@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import termsText from '../../content/legal/terms.txt?raw';
+
+const LAST_UPDATED = 'January 2026';
+const CONTACT_EMAIL = 'support@quikey.app';
+---
+
+<BaseLayout
+  title="Terms of Service — QuiKey AI Hub"
+  productName="QuiKey AI Hub"
+  navLinks={[
+    { href: '/aihub/', label: 'AI Hub' },
+    { href: '/aihub/privacy', label: 'Privacy' },
+    { href: '/blog', label: 'Blog' },
+  ]}
+  footerLinks={[
+    { href: '/aihub/', label: 'AI Hub' },
+    { href: '/aihub/privacy', label: 'Privacy' },
+    { href: '/aihub/app-privacy-labels', label: 'App Privacy (labels)' },
+    { href: '/aihub/terms', label: 'Terms' },
+  ]}
+>
+  <section class="legal-page">
+    <div class="container">
+      <div class="legal-content">
+        <h1>Terms of Service — QuiKey AI Hub</h1>
+        <p class="last-updated">Last updated: {LAST_UPDATED}</p>
+        <p class="note">
+          These terms govern your use of QuiKey AI Hub. They are part of the unified QuiKey terms and are shown here under
+          the AI Hub path for App Store metadata consistency.
+        </p>
+
+        <div class="legal-pre-container">
+          <pre class="legal-pre">{termsText}</pre>
+        </div>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about these Terms? Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding: 120px 0 60px;
+    min-height: 80vh;
+  }
+
+  .legal-content {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .legal-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .last-updated {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .note {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+
+  .legal-content p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .legal-content a {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+
+  .legal-content a:hover {
+    text-decoration: underline;
+  }
+
+  .legal-pre-container {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    margin: 2rem 0;
+  }
+
+  .legal-pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.7;
+    color: #374151;
+    font-size: 0.95rem;
+    font-family: inherit;
+  }
+
+  @media (max-width: 768px) {
+    .legal-page {
+      padding: 100px 0 40px;
+    }
+
+    .legal-content h1 {
+      font-size: 2rem;
+    }
+
+    .legal-pre-container {
+      padding: 1rem;
+    }
+  }
+</style>
