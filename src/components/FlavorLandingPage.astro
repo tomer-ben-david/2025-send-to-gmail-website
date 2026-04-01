@@ -49,6 +49,8 @@ interface Props {
   requirements: string[];
   nextSteps: string[];
   useCases: string[];
+  /** When set, replaces the default footer link row (e.g. flavor-specific Privacy URL). */
+  footerLinks?: NavLink[];
 }
 
 const {
@@ -69,6 +71,7 @@ const {
   requirements,
   nextSteps,
   useCases,
+  footerLinks: footerLinksProp,
 } = Astro.props;
 
 const WEB3FORMS_ACCESS_KEY = "b0b429e8-e074-4d99-814b-b944ca083ccb";
@@ -82,7 +85,7 @@ const navLinks: NavLink[] = [
   { href: '/blog', label: 'Blog' },
 ];
 
-const footerLinks: NavLink[] = [
+const defaultFooterLinks: NavLink[] = [
   { href: '#features', label: 'Features' },
   { href: '#download', label: 'Download' },
   { href: '#how-it-works', label: 'How it Works' },
@@ -90,6 +93,7 @@ const footerLinks: NavLink[] = [
   { href: '/privacy', label: 'Privacy' },
   { href: '/terms', label: 'Terms' },
 ];
+const footerLinks: NavLink[] = footerLinksProp ?? defaultFooterLinks;
 ---
 
 <BaseLayout
