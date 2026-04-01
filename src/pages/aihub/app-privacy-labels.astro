@@ -28,6 +28,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           Connect together.
         </p>
 
+        <h2>Advertising (important)</h2>
+        <p>
+          QuiKey AI Hub does <strong>not</strong> show third-party ads and does <strong>not</strong> use data for
+          third-party advertising or the developer’s advertising/marketing in the sense of ad networks or ad measurement.
+          Optional PostHog usage is <strong>product analytics</strong> (under Apple’s <strong>Analytics</strong> purpose),
+          not <strong>Third-Party Advertising</strong> or <strong>Developer’s Advertising or Marketing</strong>.
+        </p>
+        <p>
+          In App Store Connect, when Apple asks how each data type is used, <strong>leave advertising-related purposes
+          unchecked</strong> unless your build actually does those things.
+        </p>
+
         <h2>Data collection — summary</h2>
         <table class="label-table">
           <thead>
@@ -81,8 +93,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             analytics when enabled).
           </li>
           <li>
-            Add <strong>Identifiers → Device ID</strong>: Purpose <strong>Analytics</strong>. Indicate not linked to user
-            identity if your answers match the table above.
+            Add <strong>Identifiers → Device ID</strong>: Under purposes, select <strong>Analytics</strong> only. Do
+            <strong>not</strong> select Third-Party Advertising or Developer’s Advertising or Marketing unless you ship
+            ads. Indicate <strong>not linked</strong> to the user’s identity if your answers match the table above.
           </li>
           <li>
             Add <strong>Usage Data → Product Interaction</strong>: Purpose <strong>Analytics</strong>.
